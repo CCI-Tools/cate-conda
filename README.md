@@ -18,8 +18,12 @@ Clone this repo:
 Build Conda package `ect` (see `recipe/meta.yaml`):
     
     cd ect-conda
-    conda build recipe
+    conda build -c defaults -c conda-forge recipe
      
+The `-c` (or `--channel`) option adds extra Anaconda *channels* to search for package 
+dependencies. We must add `defaults` to search for Anaconda default packagers first, then
+for packages from `conda-forge`. which hosts the `cartopy`and `basemap` versions required by ECT.
+
 ### Testing the ECT Conda package
 
 To test the new Conda package `ect` in a test environment `ect-test`, type
