@@ -84,3 +84,4 @@ Build Anaconda installer `ect` (see `installer/construct.yaml`):
 
 * [Building packages](http://conda.pydata.org/docs/building/build.html) in Conda docs
 * [conda build](http://conda.pydata.org/docs/commands/build/conda-build.html)
+* [construct.yml](https://github.com/conda/constructor/blob/master/CONSTRUCT.md)
