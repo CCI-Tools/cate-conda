@@ -20,8 +20,9 @@ Build Conda package `ect` (see `recipe/meta.yaml`):
     cd ect-conda
     conda build recipe
      
-     
-Test new Conda package `ect` in test environment `ect-test`
+### Testing the ECT Conda package
+
+To test the new Conda package `ect` in a test environment `ect-test`, type
      
     conda create -n ect-test python=3
     source activate ect-test
@@ -74,3 +75,8 @@ Build Anaconda installer `ect` (see `installer/construct.yaml`):
         ...
 ```
 * Check: https://github.com/conda/conda-launch  
+
+## More information
+
+* [Building packages](http://conda.pydata.org/docs/building/build.html) in Conda docs
+* [conda build](http://conda.pydata.org/docs/commands/build/conda-build.html)
