@@ -1,0 +1,81 @@
+package:
+  name: ect
+  version: "0.5.1"
+
+build:
+  #string: 'rc0'
+  number: 0
+  # noarch_python: False
+  # preserve_egg_dir: False
+  # osx_is_app: False
+  entry_points:
+    # Put any entry points (scripts to be generated automatically) here.
+    - ect = ect.ui.cli:main
+
+source:
+  git_rev: v0.5.0
+  git_url: https://github.com/CCI-Tools/ect-core.git
+  # Uncomment to skip the "git clone" step
+  # path: ../../ect
+
+requirements:
+  build:
+    - python 3.5*
+    - setuptools
+    - pytest
+    - pytest-cov
+
+  run:
+    - python 3.5*
+    - numpy
+    - scipy
+    - netcdf4
+    # ect.ui.analysis only:
+    - pyproj
+    - matplotlib
+    - bokeh
+    - jupyter
+    - ipywidgets
+    - menuinst                    # [win]
+
+test:
+  # Python imports
+  imports:
+    - ect
+    - ect.ui
+    - ect.ui.cli
+    - ect.ui.inspect
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+    - ect --help
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  requires:
+    # Put any additional test requirements here.
+    - pytest
+    - pytest-cov
+
+# The app section is for creating entries in the Anaconda Launcher / Navigator
+app:
+  entry: open ${PREFIX}/Scripts/ect-cli.bat      # [win]
+  entry: open ${PREFIX}/bin/ect-cli.command      # [osx]
+  entry: open ${PREFIX}/bin/ect-cli.sh           # [unix]
+  icon: ect.png
+  own_environment: False
+  summary:  "ESA CCI Toolbox"
+
+about:
+  home: https://github.com/CCI-Tools/ect-core
+  license: MIT
+  license_file: LICENSE
+  summary: "ECT is the ESA CCI Toolbox."
+
+
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

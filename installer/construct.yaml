@@ -1,0 +1,29 @@
+name: ect
+version: 0.5.0
+
+channels:
+  - http://repo.continuum.io/pkgs/free/
+
+specs:
+  - python 3.5*
+  - conda
+  - numpy
+  - scipy
+  - netcdf4
+  - pyproj
+  - numba
+  - matplotlib
+  - cartopy
+  - bokeh
+  - pyqt
+
+packages:
+  - file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/ect-0.5.0-py35_0.tar.bz2
+  #- file:///home/marcoz/Projects/Anaconda/miniconda3/conda-bld/linux-64/ect-0.5.0-py35_0.tar.bz2
+
+license_file: ../LICENSE
+
+# Welcome image for Windows installer
+welcome_image: welcome_162x314.png
+header_image: header_150x57.png
+icon_image: icon_256x256.png

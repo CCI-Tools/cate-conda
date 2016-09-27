@@ -1,0 +1,17 @@
+[Desktop Entry]
+Comment=
+Exec=${PREFIX}/bin/ect-cli.sh
+TryExec=${PREFIX}/bin/ect-cli.sh
+GenericName=ECT Command-Line Interface
+Icon=${PREFIX}/share/ect/ect.png
+MimeType=
+Name=ect
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -1,0 +1,11 @@
+{
+  "menu_name": "ESA CCI Toolbox",
+  "menu_items": [
+    {
+      "name": "ECT Command-Line Interface",
+      "system": "%COMSPEC%",
+      "scriptarguments": ["/K", "${PREFIX}\\Scripts\\ect-cli.bat"],
+      "icon": "${MENU_DIR}/ect.ico"
+    }
+  ]
+}
