@@ -7,15 +7,17 @@ channels:
 specs:
   - python 3.5*
   - conda
+  - xarray
+  - dask
   - numpy
   - scipy
   - netcdf4
-  - pyproj
   - numba
   - matplotlib
+  - pandas
   - cartopy
-  - bokeh
-  - pyqt
+  - basemap
+  - tornado
 
 packages:
   - file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/ect-0.5.0-py35_0.tar.bz2

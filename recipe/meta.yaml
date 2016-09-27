@@ -27,24 +27,35 @@ requirements:
 
   run:
     - python 3.5*
+    - menuinst    # [win]
+    - xarray
+    - dask
     - numpy
     - scipy
     - netcdf4
-    # ect.ui.analysis only:
-    - pyproj
+    - numba
     - matplotlib
-    - bokeh
-    - jupyter
-    - ipywidgets
-    - menuinst                    # [win]
+    - pandas
+    - cartopy
+    - basemap
+    - tornado
 
 test:
   # Python imports
   imports:
     - ect
+    - ect.core
+    - ect.core.io
+    - ect.core.op
+    - ect.core.workflow
+    - ect.core.objectio
+    - ect.core.util
+    - ect.ds
+    - ect.ops
     - ect.ui
     - ect.ui.cli
-    - ect.ui.inspect
+    - ect.ui.workspace
+    - ect.ui.webapi
 
   commands:
     # You can put test commands to be run here.  Use this to test that the
