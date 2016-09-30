@@ -26,6 +26,7 @@ requirements:
     - pytest
     - pytest-cov
 
+    - pyqt
     - matplotlib
     - xarray
     - dask
@@ -42,6 +43,7 @@ requirements:
     - python 3.5*
     - menuinst    # [win]
 
+    - pyqt
     - matplotlib
     - xarray
     - dask
