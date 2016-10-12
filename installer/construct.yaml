@@ -1,5 +1,5 @@
 name: ect
-version: "0.5.0a01"
+version: "0.5.02"
 
 channels:
   - http://repo.continuum.io/pkgs/free
@@ -27,9 +27,9 @@ specs:
   - tornado
 
 packages:
-  - file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/ect-0.5.0a01-py35_0.tar.bz2
-  #- file:///home/norman/Apps/miniconda3/conda-bld/linux-64/ect-0.5.0a01-py35_0.tar.bz2
-  #- file:///home/marcoz/Projects/Anaconda/miniconda3/conda-bld/linux-64/ect-0.5.0a01-py35_0.tar.bz2
+  - file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/ect-0.5.0a2-py35_0.tar.bz2
+  #- file:///home/norman/Apps/miniconda3/conda-bld/linux-64/ect-0.5.0a2-py35_0.tar.bz2
+  #- file:///home/marcoz/Projects/Anaconda/miniconda3/conda-bld/linux-64/ect-0.5.0a2-py35_0.tar.bz2
 
 license_file: ../LICENSE
 
