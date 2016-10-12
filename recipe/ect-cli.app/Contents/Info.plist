@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>ECT Command-Line Interface</string>
+	<string>ESA CCI Toolbox CLI</string>
 	<key>CFBundleExecutable</key>
 	<string>launch-ect-cli-in-terminal.sh</string>
 	<key>CFBundleIconFile</key>
