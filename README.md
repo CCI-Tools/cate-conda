@@ -30,7 +30,7 @@ To test the new Conda package `ect` in a test environment `ect-test`, type
      
     conda create -n ect-test python=3
     source activate ect-test
-    conda install --use-local ect
+    conda install -c defaults -c conda-forge --use-local ect
     ...
     ect --help
 
