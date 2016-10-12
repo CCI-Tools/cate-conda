@@ -5,7 +5,7 @@ ECT_HOME="$( cd "${ECT_BIN}/.."  && pwd )"
 
 reset
 echo
-echo Welcome to the ECT command-line interface. Type "ect -h" to get help.
+echo Welcome to the CCI Toolbox command-line interface. Type "ect -h" to get help.
 echo
 
 source "${ECT_BIN}/activate" "${ECT_HOME}"

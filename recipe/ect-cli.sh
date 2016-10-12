@@ -4,7 +4,7 @@ ECT_BIN="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ECT_HOME="$( cd "${ECT_BIN}/.."  && pwd )"
 
 echo
-echo Welcome to the command-line interface. Type "ect -h" to get help.
+echo Welcome to the CCI Toolbox command-line interface. Type "ect -h" to get help.
 echo
 
 source "${ECT_BIN}/activate" "${ECT_HOME}"

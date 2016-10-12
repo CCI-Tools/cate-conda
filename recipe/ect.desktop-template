@@ -2,10 +2,9 @@
 Comment=
 Exec=${PREFIX}/bin/ect-cli.sh
 TryExec=${PREFIX}/bin/ect-cli.sh
-GenericName=ECT Command-Line Interface
 Icon=${PREFIX}/share/ect/ect.png
 MimeType=
-Name=ect
+Name=ESA CCI Toolbox CLI
 Path=
 StartupNotify=true
 Terminal=true

@@ -14,7 +14,7 @@ if errorlevel 1 exit 1
 prompt $G$S
 
 echo.
-@echo Welcome to the ECT command-line interface. Type "ect -h" to get help.
+@echo Welcome to the CCI Toolbox command-line interface. Type "ect -h" to get help.
 echo.
 
 cmd /K ""
