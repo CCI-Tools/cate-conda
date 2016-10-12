@@ -15,7 +15,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleIdentifier</key>
-	<string>snap-desktop</string>
+	<string>ect-cli</string>
 	<key>CFBundleVersion</key>
 	<string>${PKG_VERSION}</string>
 	<key>CFBundleShortVersionString</key>
