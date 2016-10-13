@@ -14,10 +14,10 @@ build:
     - ect-webapi = ect.ui.webapi:main
 
 source:
-  # git_rev: v0.5.0a2
-  # git_url: https://github.com/CCI-Tools/ect-core.git
+  git_rev: v0.5.0a2
+  git_url: https://github.com/CCI-Tools/ect-core.git
   # Uncomment to skip the "git clone" step
-  path: ../../ect-core
+  # path: ../../ect-core
 
 requirements:
   build:
