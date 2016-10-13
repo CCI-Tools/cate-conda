@@ -8,7 +8,7 @@ then
     chmod 775 $PREFIX/bin/ect-cli.command
     cp -r $RECIPE_DIR/ect-cli.app $PREFIX/bin/
     sed -i -e "s,\${PKG_VERSION},${PKG_VERSION},g" "${PREFIX}/bin/ect-cli.app/Contents/Info.plist"
-    chmod 775 ${PREFIX}/bin/ect-cli.app/Contents/MacOS/launch-ect-cli-in-terminal.sh
+    chmod 775 "${PREFIX}/bin/ect-cli.app/Contents/MacOS/launch-ect-cli-in-terminal.sh"
 else
     cp $RECIPE_DIR/ect-cli.sh $PREFIX/bin
     chmod 775 $PREFIX/bin/ect-cli.sh
