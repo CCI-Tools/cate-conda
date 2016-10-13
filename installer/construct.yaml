@@ -25,6 +25,7 @@ specs:
   - cartopy
   - basemap
   - tornado
+  - jdcal
 
 packages:
   - file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/ect-0.5.0a2-py35_0.tar.bz2
