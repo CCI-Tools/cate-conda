@@ -4,8 +4,8 @@
     {
       "name": "ESA CCI Toolbox CLI",
       "system": "%COMSPEC%",
-      "scriptarguments": ["/K", "${PREFIX}\\Scripts\\ect-cli.bat"],
-      "icon": "${MENU_DIR}/ect.ico"
+      "scriptarguments": ["/K", "${PREFIX}\\Scripts\\cate-cli.bat"],
+      "icon": "${MENU_DIR}/cate.ico"
     }
   ]
 }

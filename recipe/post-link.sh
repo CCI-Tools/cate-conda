@@ -5,8 +5,8 @@
 if [ `uname` != Darwin ]
 then
     APP_DIR="${HOME}/.local/share/applications"
-    DESKTOP_TEMPLATE="${PREFIX}/share/ect/ect.desktop-template"
+    DESKTOP_TEMPLATE="${PREFIX}/share/cate/cate.desktop-template"
 
     mkdir -p "${APP_DIR}"
-    cat "${DESKTOP_TEMPLATE}" | sed -e "s,\${PREFIX},${PREFIX},g"  > "${APP_DIR}/ect.desktop"
+    cat "${DESKTOP_TEMPLATE}" | sed -e "s,\${PREFIX},${PREFIX},g"  > "${APP_DIR}/cate.desktop"
 fi

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Comment=
-Exec=${PREFIX}/bin/ect-cli.sh
-TryExec=${PREFIX}/bin/ect-cli.sh
-Icon=${PREFIX}/share/ect/ect.png
+Exec=${PREFIX}/bin/cate-cli.sh
+TryExec=${PREFIX}/bin/cate-cli.sh
+Icon=${PREFIX}/share/cate/cate.png
 MimeType=
 Name=ESA CCI Toolbox CLI
 Path=

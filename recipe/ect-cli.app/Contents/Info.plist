@@ -5,9 +5,9 @@
 	<key>CFBundleName</key>
 	<string>ESA CCI Toolbox CLI</string>
 	<key>CFBundleExecutable</key>
-	<string>launch-ect-cli-in-terminal.sh</string>
+	<string>launch-cate-cli-in-terminal.sh</string>
 	<key>CFBundleIconFile</key>
-	<string>ect.icns</string>
+	<string>cate.icns</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleIdentifier</key>
-	<string>ect-cli</string>
+	<string>cate-cli</string>
 	<key>CFBundleVersion</key>
 	<string>${PKG_VERSION}</string>
 	<key>CFBundleShortVersionString</key>

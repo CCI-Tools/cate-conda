@@ -1,5 +1,5 @@
 package:
-  name: ect
+  name: cate
   version: "0.5.0a2"
 
 build:
@@ -10,14 +10,14 @@ build:
   # osx_is_app: False
   entry_points:
     # Put any entry points (scripts to be generated automatically) here.
-    - ect = ect.ui.cli:main
-    - ect-webapi = ect.ui.webapi:main
+    - cate = cate.ui.cli:main
+    - cate-webapi = cate.ui.webapi:main
 
 source:
   git_rev: v0.5.0a2
-  git_url: https://github.com/CCI-Tools/ect-core.git
+  git_url: https://github.com/CCI-Tools/cate-core.git
   # Uncomment to skip the "git clone" step
-  # path: ../../ect-core
+  # path: ../../cate-core
 
 requirements:
   build:
@@ -61,24 +61,24 @@ requirements:
 test:
   # Python imports
   imports:
-    - ect
-    - ect.core
-    - ect.core.ds
-    - ect.core.op
-    - ect.core.workflow
-    - ect.core.objectio
-    - ect.core.util
-    - ect.ds
-    - ect.ops
-    - ect.ui
-    - ect.ui.cli
-    - ect.ui.workspace
-    - ect.ui.webapi
+    - cate
+    - cate.core
+    - cate.core.ds
+    - cate.core.op
+    - cate.core.workflow
+    - cate.core.objectio
+    - cate.core.util
+    - cate.ds
+    - cate.ops
+    - cate.ui
+    - cate.ui.cli
+    - cate.ui.workspace
+    - cate.ui.webapi
 
   commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
-    - ect --help
+    - cate --help
 
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
@@ -90,15 +90,15 @@ test:
 
 # The app section is for creating entries in the Anaconda Launcher / Navigator
 app:
-  entry: open ${PREFIX}/Scripts/ect-cli.bat      # [win]
-  entry: open ${PREFIX}/bin/ect-cli.command      # [osx]
-  entry: open ${PREFIX}/bin/ect-cli.sh           # [unix]
-  icon: ect.png
+  entry: open ${PREFIX}/Scripts/cate-cli.bat      # [win]
+  entry: open ${PREFIX}/bin/cate-cli.command      # [osx]
+  entry: open ${PREFIX}/bin/cate-cli.sh           # [unix]
+  icon: cate.png
   own_environment: False
   summary:  "ESA CCI Toolbox"
 
 about:
-  home: https://github.com/CCI-Tools/ect-core
+  home: https://github.com/CCI-Tools/cate-core
   license: MIT
   license_file: LICENSE.md
   summary: "ESA CCI Toolbox"

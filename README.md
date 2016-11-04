@@ -1,10 +1,10 @@
-# ect-conda
+# cate-conda
 
-Conda recipe and Anaconda installer for the ECT contained in https://github.com/CCI-Tools/ect-core
+Conda recipe and Anaconda installer for Cate contained in https://github.com/CCI-Tools/cate-core
 
 ## Conda package
 
-### Building the ECT Conda package
+### Building the Cate Conda package
 
 Install `conda-build` in your root Miniconda:
 
@@ -13,26 +13,26 @@ Install `conda-build` in your root Miniconda:
     
 Clone this repo:
     
-    git clone https://github.com/CCI-Tools/ect-conda.git
+    git clone https://github.com/CCI-Tools/cate-conda.git
     
-Build Conda package `ect` (see `recipe/meta.yaml`):
+Build Conda package `cate` (see `recipe/meta.yaml`):
     
-    cd ect-conda
+    cd cate-conda
     conda build -c defaults -c conda-forge recipe
      
 The `-c` (or `--channel`) option adds extra Anaconda *channels* to search for package 
 dependencies. We must add `defaults` to search for Anaconda default packagers first, then
-for packages from `conda-forge`. which hosts the `cartopy`and `basemap` versions required by ECT.
+for packages from `conda-forge`. which hosts the `cartopy`and `basemap` versions required by Cate.
 
-### Testing the ECT Conda package
+### Testing the Cate Conda package
 
-To test the new Conda package `ect` in a test environment `ect-test`, type
+To test the new Conda package `cate` in a test environment `cate-test`, type
      
-    conda create -n ect-test python=3
-    source activate ect-test
-    conda install -c defaults -c conda-forge --use-local ect
+    conda create -n cate-test python=3
+    source activate cate-test
+    conda install -c defaults -c conda-forge --use-local cate
     ...
-    ect --help
+    cate --help
 
 ### Remaining problems & TODOs
 
@@ -43,7 +43,7 @@ To test the new Conda package `ect` in a test environment `ect-test`, type
 ### Building the installer
 
 *Warning: there is still an absolute (Windows!) path in `installer/construct.yaml` which will remain
-until we have uploaded the ECT Conda package to a public repository.*
+until we have uploaded the Cate Conda package to a public repository.*
 
 Install `constructor` in your root Miniconda:
 
@@ -52,16 +52,16 @@ Install `constructor` in your root Miniconda:
 
 Clone this repo:
 
-    git clone https://github.com/CCI-Tools/ect-conda.git
+    git clone https://github.com/CCI-Tools/cate-conda.git
 
-Build Anaconda installer `ect` (see `installer/construct.yaml`):
+Build Anaconda installer `cate` (see `installer/construct.yaml`):
 
-    cd ect-conda
+    cd cate-conda
     constructor installer
 
 ### Remaining problems & TODOs
 
-* For the ECT CLI, we'd like to have desktop icons for Windows, Mac OS and at least Ubuntu.
+* For the Cate CLI, we'd like to have desktop icons for Windows, Mac OS and at least Ubuntu.
   Currently, we can only have a Windows menu group (which is ok for time being).
   See https://github.com/conda/constructor/issues/38
 * On Windows, `constructor` will install anything it finds in a package's `Menu` entry.
