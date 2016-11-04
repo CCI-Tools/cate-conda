@@ -1,5 +1,5 @@
 name: cate
-version: "0.5.0a2"
+version: "0.5.0a3"
 
 channels:
   - http://repo.continuum.io/pkgs/free
@@ -28,9 +28,9 @@ specs:
   - jdcal
 
 packages:
-  - file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/cate-0.5.0a2-py35_0.tar.bz2
-  #- file:///home/norman/Apps/miniconda3/conda-bld/linux-64/cate-0.5.0a2-py35_0.tar.bz2
-  #- file:///home/marcoz/Projects/Anaconda/miniconda3/conda-bld/linux-64/cate-0.5.0a2-py35_0.tar.bz2
+  - file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/cate-0.5.0a3-py35_0.tar.bz2
+  #- file:///home/norman/Apps/miniconda3/conda-bld/linux-64/cate-0.5.0a3-py35_0.tar.bz2
+  #- file:///home/marcoz/Projects/Anaconda/miniconda3/conda-bld/linux-64/cate-0.5.0a3-py35_0.tar.bz2
 
 license_file: ../LICENSE
 

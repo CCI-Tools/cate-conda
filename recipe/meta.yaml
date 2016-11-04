@@ -1,6 +1,6 @@
 package:
   name: cate
-  version: "0.5.0a2"
+  version: "0.5.0a3"
 
 build:
   #string: 'rc0'
@@ -14,10 +14,10 @@ build:
     - cate-webapi = cate.ui.webapi:main
 
 source:
-  git_rev: v0.5.0a2
+  # git_rev: v0.5.0a3
   git_url: https://github.com/CCI-Tools/cate-core.git
   # Uncomment to skip the "git clone" step
-  # path: ../../cate-core
+  path: ../../cate-core
 
 requirements:
   build:
@@ -95,13 +95,13 @@ app:
   entry: open ${PREFIX}/bin/cate-cli.sh           # [unix]
   icon: cate.png
   own_environment: False
-  summary:  "ESA CCI Toolbox"
+  summary:  "ESA CCI Toolbox (Cate)"
 
 about:
   home: https://github.com/CCI-Tools/cate-core
   license: MIT
   license_file: LICENSE.md
-  summary: "ESA CCI Toolbox"
+  summary: "ESA CCI Toolbox (Cate)"
 
 
 

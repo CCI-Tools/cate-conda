@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>ESA CCI Toolbox CLI</string>
+	<string>ESA CCI Toolbox (Cate) CLI</string>
 	<key>CFBundleExecutable</key>
 	<string>launch-cate-cli-in-terminal.sh</string>
 	<key>CFBundleIconFile</key>
