@@ -35,6 +35,7 @@ requirements:
     - netcdf4
     - numba
     - pandas
+    - pillow
     - cartopy
     - basemap
     - tornado
@@ -53,6 +54,7 @@ requirements:
     - netcdf4
     - numba
     - pandas
+    - pillow
     - cartopy
     - basemap
     - tornado
