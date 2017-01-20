@@ -49,6 +49,8 @@ Install `constructor` in your root Miniconda:
 
     source activate
     conda install constructor
+    
+**At least version 1.5.2 is required**.
 
 Clone this repo:
 
