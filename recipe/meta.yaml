@@ -35,7 +35,6 @@ requirements:
     - netcdf4
     - numba
     - pandas
-    - pillow
     - cartopy
     - pillow 3.4.2
     - hdf4 4.2.12
@@ -56,7 +55,6 @@ requirements:
     - netcdf4
     - numba
     - pandas
-    - pillow
     - cartopy
     - pillow  3.4.2
     - hdf4 4.2.12

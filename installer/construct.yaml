@@ -22,7 +22,6 @@ specs:
   - netcdf4
   - numba
   - pandas
-  - pillow
   - cartopy
   - basemap
   - pillow 3.4.2
