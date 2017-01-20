@@ -1,6 +1,6 @@
 package:
   name: cate
-  version: "0.5.0a3"
+  version: "0.6.0a1"
 
 build:
   #string: 'rc0'
@@ -14,8 +14,8 @@ build:
     - cate-webapi = cate.ui.webapi:main
 
 source:
-  # git_rev: v0.5.0a3
-  git_url: https://github.com/CCI-Tools/cate-core.git
+  # git_rev: v0.6.0a1
+  #git_url: https://github.com/CCI-Tools/cate-core.git
   # Uncomment to skip the "git clone" step
   path: ../../cate-core
 
@@ -37,6 +37,8 @@ requirements:
     - pandas
     - pillow
     - cartopy
+    - pillow 3.4.2
+    - hdf4 4.2.12
     - basemap
     - tornado
     - jdcal
@@ -56,6 +58,8 @@ requirements:
     - pandas
     - pillow
     - cartopy
+    - pillow  3.4.2
+    - hdf4 4.2.12
     - basemap
     - tornado
     - jdcal
