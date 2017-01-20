@@ -22,7 +22,7 @@ Build Conda package `cate` (see `recipe/meta.yaml`):
      
 The `-c` (or `--channel`) option adds extra Anaconda *channels* to search for package 
 dependencies. We must add `defaults` to search for Anaconda default packagers first, then
-for packages from `conda-forge`. which hosts the `cartopy`and `basemap` versions required by Cate.
+for packages from `conda-forge`, which hosts the `cartopy`and `basemap` versions required by Cate.
 
 ### Testing the Cate Conda package
 

@@ -31,6 +31,7 @@ specs:
   - jdcal
 
 packages:
+  #- file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/cate-0.6.0a1-py35_0.tar.bz2
   #- file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/cate-0.5.0a3-py35_0.tar.bz2
   #- file:///home/norman/Apps/miniconda3/conda-bld/linux-64/cate-0.5.0a3-py35_0.tar.bz2
   #- file:///home/marcoz/Projects/Anaconda/miniconda3/conda-bld/linux-64/cate-0.6.0a1-py35_0.tar.bz2
