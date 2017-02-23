@@ -5,9 +5,8 @@ python:
 matrix:
   include:
     - os: linux
-      dist: trusty
       sudo: required
-      language: python
+      language: generic
     - os: osx
       sudo: required
       language: generic
