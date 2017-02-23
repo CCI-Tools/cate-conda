@@ -19,7 +19,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update conda
   - conda install conda-build
-  - conda create --n build-environment python=$CONDA_PY
+  - conda create -n build-environment python=$CONDA_PY
   - source activate build-environment
   - conda build --output-folder pkgs -c conda-forge -c defaults recipes/cate
   # Useful for debugging any issues with conda
