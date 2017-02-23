@@ -1,6 +1,5 @@
-language: python
-python:
-  - "3.5"
+env:
+  - CONDA_PY=3.5
 
 matrix:
   include:
@@ -21,12 +20,12 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda install conda-build
-  - conda create -q -n build-environment python=$TRAVIS_PYTHON_VERSION
+  - conda create -q -n build-environment python=$CONDA_PY
   - source activate build-environment
   - conda build --output-folder pkgs -c conda-forge -c defaults recipes/cate
   # Useful for debugging any issues with conda
   - conda info -a
-  - conda create -q -n constructor-environment python=$TRAVIS_PYTHON_VERSION constructor
+  - conda create -q -n constructor-environment python=$CONDA_PY constructor
   - source activate constructor-environment
 
 script:
