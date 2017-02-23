@@ -27,7 +27,7 @@ source:
 
 requirements:
   build:
-    - python 3.5
+    - python >=3.5,<3.6
     - setuptools
     - pytest
     - pytest-cov
