@@ -8,9 +8,10 @@ branches:
 
 install:
   - set PATH=C:\Miniconda35-x64;C:\Miniconda35-x64\Scripts;%PATH%
-  - conda build --output-folder pkgs -c conda-forge -c defaults recipes/cate
-  - conda install -y constructor
-  - constructor installer
+  - conda build --output-folder cate-packages -c conda-forge -c defaults recipes\cate
+  - conda build --output-folder cate-packages -c conda-forge -c defaults recipes\cate-cli
+  - conda build --output-folder cate-packages -c conda-forge -c defaults recipes\cate-lib
+  - conda build --output-folder cate-packages -c conda-forge -c defaults recipes\cate-util
 
 platform:
   - x86
@@ -22,3 +23,6 @@ matrix:
 artifacts:
   - path: '*.exe'
     name: cate-installer-exe
+
+#  TODO (forman): upload packages to anaconda package repo
+
