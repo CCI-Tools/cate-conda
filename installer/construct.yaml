@@ -31,7 +31,8 @@ specs:
   - jdcal
 
 packages:
-  - pkgs/cate-0.7.0a4-py35_2.tar.bz2
+  - cate-packages/linux-x64/cate-0.7.0a4-py35_2.tar.bz2 # [unix]
+  - cate-packages/osx-x64/cate-0.7.0a4-py35_2.tar.bz2 # [osx]
   #- file:///C|/Users/Norman/Miniconda3/conda-bld/win-64/cate-0.7.0a4-py35_2.tar.bz2
   #- file:///home/norman/Apps/miniconda3/conda-bld/linux-64/cate-0.5.0a3-py35_0.tar.bz2
 
