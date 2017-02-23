@@ -1,0 +1,37 @@
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+      language: python
+    - os: osx
+      sudo: required
+      language: generic
+
+install:
+  - sudo apt-get update
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh;
+    else
+      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    fi
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  # Useful for debugging any issues with conda
+  - conda info -a
+  - conda create -q -n constructor-environment python=$TRAVIS_PYTHON_VERSION constructor
+  - source activate constructor-environment
+
+script:
+  - constructor installer
+
+#env:
+#  global:
+#    - "FTP_USER=dedop"
+#    - "FTP_PASSWORD=ELsafkZM8W0tn+YLctiTJE5QvlxrxRlwFCFK8R/uy+9cf6IHB9k7cqupVu+jel7cJAoMIbdA/JiycAmXyMOfbHlQT39VKE8w2FT0PLSA1z1Xk4GuYNFfSBaevkt/IsnTJr+EQ4z9ba5evlso02btW7X7VBCMorepcDxPjeVXyZiYL0QL+QzgqNT3L80V0CNVWDkGQkzzaxBffoq4Q3kOtCTtnaUkuyw7RW7PPs2o561aiFJnEdjkgfSVqnYXr05GSobJznyVqIrxdO+ByWolsEYQukX19RTSC7LL0QrdBXhOVEy6EIfQlbi58yylYI9nu7LFQV7C2ZvhggJ2Twj2y9i//xf/kVfaW5xj0zH6Y6Eq9tBBK4pJJsj9iKX49b14PJJT9EubTS82uY8uJCKlS5EEWBQRA2FbKTjWGtc2ZKtL/kJEEf96jBQjDrYNas39hCnqs1blJ6hSvzv6NxXN8Cn+GM2BfVW+JWLt5W3dorBaVJBNMBhvPMGVqzLNZkrt9l2kHhiOJX4MxYlcRHUK2XTfRUNw4lOvFgsaGVyvbKrO0ppSqkNXdZNassTblfRFO30jjI0i0j8RaBQFpxpqL3bL1Rf522E2zwq/BmOlTgITNo0ovyE1/mzvNdjfY7x10QMhka7OUoxf0jPRnlGucaPJVkGWAl2dn2cXhi09YfQ="
+#
+#after_success:
+#  "curl --ftp-create-dirs -T DeDop-0.5.3-Linux-x86_64.sh -u $FTP_USER:$FTP_PASSWORD ftp://ftp.brockmann-consult.de/$TRAVIS_OS_NAME"

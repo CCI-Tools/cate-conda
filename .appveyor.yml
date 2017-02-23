@@ -1,0 +1,23 @@
+version: '0.7.0a4'
+
+build: off
+
+branches:
+  only:
+    - master
+
+install:
+  - set PATH=C:\Miniconda35-x64;C:\Miniconda35-x64\Scripts;%PATH%
+  - conda install -y constructor
+  - constructor installer
+
+platform:
+  - x86
+  - x64
+
+matrix:
+  fast_finish: true
+
+artifacts:
+  - path: '*.exe'
+    name: cate-installer-exe
