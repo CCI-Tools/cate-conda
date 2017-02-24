@@ -5,7 +5,7 @@ about:
   summary: "ESA CCI Toolbox (Cate), library only"
   home: https://github.com/CCI-Tools/cate-core
   license: MIT
-  license_file: LICENSE.md
+  license_file: LICENSE
 
 package:
   name: cate-lib

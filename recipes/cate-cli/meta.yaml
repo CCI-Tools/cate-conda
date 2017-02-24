@@ -5,7 +5,7 @@ about:
   summary: "ESA CCI Toolbox (Cate) command-line interface"
   home: https://github.com/CCI-Tools/cate-core
   license: MIT
-  license_file: LICENSE.md
+  license_file: LICENSE
 
 package:
   name: cate
@@ -99,7 +99,7 @@ test:
 app:
   entry: open ${PREFIX}/Scripts/cate-cli.bat      # [win]
   entry: open ${PREFIX}/bin/cate-cli.command      # [osx]
-  entry: open ${PREFIX}/bin/cate-cli.sh           # [unix]
+  entry: open ${PREFIX}/bin/cate-cli.sh           # [linux]
   icon: cate.png
   own_environment: False
   summary:  "ESA CCI Toolbox (Cate) command-line interface"
