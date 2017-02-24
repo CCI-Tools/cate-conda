@@ -22,8 +22,9 @@ build:
 source:
   # git_rev: v0.6.0a1
   #git_url: https://github.com/CCI-Tools/cate-core.git
+  git_url: https://github.com/CCI-Tools/cate-core.git
   # Uncomment to skip the "git clone" step
-  path: ../../../cate-core
+  # path: ../../../cate-core
 
 requirements:
   build:
