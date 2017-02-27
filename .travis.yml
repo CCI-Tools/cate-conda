@@ -34,7 +34,7 @@ script:
   - echo $CATE_OUTPUT
   - ls -l $CATE_OUTPUT
   #
-  - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force
+  - echo anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force
   #
   #- CATE_CLI_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-cli --output)
   #- anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force
