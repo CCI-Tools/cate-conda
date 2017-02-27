@@ -26,18 +26,23 @@ install:
 
 script:
   - conda build -c conda-forge -c defaults recipes/cate
-  - conda build -c conda-forge -c defaults recipes/cate-cli
-  - conda build -c conda-forge -c defaults recipes/cate-lib
-  - conda build -c conda-forge -c defaults recipes/cate-util
-  - echo CATE_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate --output)
+#  - conda build -c conda-forge -c defaults recipes/cate-cli
+#  - conda build -c conda-forge -c defaults recipes/cate-lib
+#  - conda build -c conda-forge -c defaults recipes/cate-util
+  #
   - CATE_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate --output)
-  - ls $CATE_OUTPUT
+  - echo $CATE_OUTPUT
+  - ls -l $CATE_OUTPUT
+  #
   - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force
-  - CATE_CLI_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-cli --output)
-  - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force
-  - CATE_LIB_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-lib --output)
-  - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_LIB_OUTPUT" -u ccitools --force
-  - CATE_UTIL_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-util --output)
-  - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force
+  #
+  #- CATE_CLI_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-cli --output)
+  #- anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force
+  #
+  #- CATE_LIB_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-lib --output)
+  #- anaconda -v -t $ANACONDA_TOKEN upload "$CATE_LIB_OUTPUT" -u ccitools --force
+  #
+  #- CATE_UTIL_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-util --output)
+  #- anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force
 
 #  TODO (forman): upload packages to anaconda package repo
