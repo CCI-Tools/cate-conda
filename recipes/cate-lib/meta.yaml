@@ -9,8 +9,9 @@ about:
 
 package:
   name: cate-lib
-  # Not released/deployed yet!
-  version: "0.7.0a4"
+  # Not released/deployed yet! Use PEP 440 versioning scheme
+  # ref: https://www.python.org/dev/peps/pep-0440/#developmental-releases
+  version: "0.7.0.dev1"
 
 build:
   number: 2
