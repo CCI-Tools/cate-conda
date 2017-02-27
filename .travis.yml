@@ -1,7 +1,10 @@
 language: generic
 
 env:
-  - CONDA_PY=3.5
+  global:
+    - CONDA_PY=3.5
+    #  the following key was generated in 2 steps based on the example here https://github.com/quantopian/zipline/blob/master/.travis.yml
+    - secure: "dYYjiTIOn7Q1XjdPXYZ46YWiE2XVfUpIGIhRBrsYdTLvGvVhvQEAb7kaeCBSWzPUebo2SkuUvUZrXNDzUlt9cMXRamaiyZWj45iIeXWPPbYuZVThaS2XHE0ZpDScKi5gSWOvXyKVazQPAJVSHA5c/deru8WbbkKFBjZoAAZoAo8n9UB+L3ka5haiyc2UnEKGAnpTFzjbfJHFiYpb2QUOFVkk3NjF8rHDJBIxPc83+fL/1fJS1mGfSApNwB528XcBi+56SFfi77XflopHYP277vZalps4cNdzYqy1whI9wc8CD2SmiHNuEM2LRQhzRvDG6drRKRyiVxFMgv0kvU0P6SkdllqA0d2gMTOpvB/GjdxPtCD4/iCZna02YcAfALilhH/HCPUPOEX0iOSJ1+UbRrLWUVEH7BB+PujDvmQWKmwNtV8Ui4o+od13+fqAshYuLGv2rkXsJHFctdGjQcO3eF5QIl9DZmyBq9PfYnOhzEDaB1IZMNDoYUylMXi7gxm3u3QpcnbWAgzDZyYAokgcU1uBb/zHdaDaU3kZTUf2jKhPuBY70C/nSKBhJJbHa0BlFNYKGOXwV0vO+XdaZToVZxc1Y2rhNkkqZ05dGfV2rGM8L2ftktLFEeaaW5uLy2ZAwN9jto/F1kxi0eDXjpnMUTRvrLsZYbbWfeLxUwncH6U="
 
 os:
   - linux
@@ -19,12 +22,20 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update conda
   - conda info -a
-  - conda install conda-build
+  - conda install conda-build anaconda-client
 
 script:
   - conda build --output-folder cate-packages -c conda-forge -c defaults recipes/cate
   - conda build --output-folder cate-packages -c conda-forge -c defaults recipes/cate-cli
   - conda build --output-folder cate-packages -c conda-forge -c defaults recipes/cate-lib
   - conda build --output-folder cate-packages -c conda-forge -c defaults recipes/cate-util
+  - CATE_OUTPUT=$(conda build --output-folder cate-packages -c conda-forge -c defaults recipes/cate)
+  - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force
+  - CATE_CLI_OUTPUT=$(conda build --output-folder cate-packages -c conda-forge -c defaults recipes/cate-cli)
+  - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force
+  - CATE_LIB_OUTPUT=$(conda build --output-folder cate-packages -c conda-forge -c defaults recipes/cate-lib)
+  - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_LIB_OUTPUT" -u ccitools --force
+  - CATE_UTIL_OUTPUT=$(conda build --output-folder cate-packages -c conda-forge -c defaults recipes/cate-util)
+  - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force
 
 #  TODO (forman): upload packages to anaconda package repo
