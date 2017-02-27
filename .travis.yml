@@ -29,7 +29,9 @@ script:
   - conda build -c conda-forge -c defaults recipes/cate-cli
   - conda build -c conda-forge -c defaults recipes/cate-lib
   - conda build -c conda-forge -c defaults recipes/cate-util
+  - echo CATE_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate --output)
   - CATE_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate --output)
+  - ls $CATE_OUTPUT
   - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force
   - CATE_CLI_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-cli --output)
   - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force
