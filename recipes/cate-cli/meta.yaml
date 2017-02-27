@@ -8,7 +8,7 @@ about:
   license_file: LICENSE
 
 package:
-  name: cate
+  name: cate-cli
   # Not released/deployed yet! Use PEP 440 versioning scheme
   # ref: https://www.python.org/dev/peps/pep-0440/#developmental-releases
   version: "0.7.0.dev1"
