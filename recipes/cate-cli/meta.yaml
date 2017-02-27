@@ -16,8 +16,8 @@ build:
   number: 2
   entry_points:
     # Put any entry points (scripts to be generated automatically) here.
-    - cate = cate.ui.cli:main
-    - cate-webapi = cate.ui.webapi:main
+    - cate = cate.cli.main:main
+    - cate-webapi = cate.webapi.main:main
 
 source:
   # git_rev: v0.6.0a1
@@ -74,13 +74,12 @@ test:
     - cate.core.op
     - cate.core.workflow
     - cate.core.objectio
-    - cate.core.util
+    - cate.core.workspace
+    - cate.util
     - cate.ds
     - cate.ops
-    - cate.ui
-    - cate.ui.cli
-    - cate.ui.workspace
-    - cate.ui.webapi
+    - cate.cli
+    - cate.webapi
 
   commands:
     # You can put test commands to be run here.  Use this to test that the
