@@ -4,7 +4,7 @@ env:
   global:
     - CONDA_PY=3.5
     #  the following key was generated in 2 steps based on the example here https://github.com/quantopian/zipline/blob/master/.travis.yml
-    - secure: "dYYjiTIOn7Q1XjdPXYZ46YWiE2XVfUpIGIhRBrsYdTLvGvVhvQEAb7kaeCBSWzPUebo2SkuUvUZrXNDzUlt9cMXRamaiyZWj45iIeXWPPbYuZVThaS2XHE0ZpDScKi5gSWOvXyKVazQPAJVSHA5c/deru8WbbkKFBjZoAAZoAo8n9UB+L3ka5haiyc2UnEKGAnpTFzjbfJHFiYpb2QUOFVkk3NjF8rHDJBIxPc83+fL/1fJS1mGfSApNwB528XcBi+56SFfi77XflopHYP277vZalps4cNdzYqy1whI9wc8CD2SmiHNuEM2LRQhzRvDG6drRKRyiVxFMgv0kvU0P6SkdllqA0d2gMTOpvB/GjdxPtCD4/iCZna02YcAfALilhH/HCPUPOEX0iOSJ1+UbRrLWUVEH7BB+PujDvmQWKmwNtV8Ui4o+od13+fqAshYuLGv2rkXsJHFctdGjQcO3eF5QIl9DZmyBq9PfYnOhzEDaB1IZMNDoYUylMXi7gxm3u3QpcnbWAgzDZyYAokgcU1uBb/zHdaDaU3kZTUf2jKhPuBY70C/nSKBhJJbHa0BlFNYKGOXwV0vO+XdaZToVZxc1Y2rhNkkqZ05dGfV2rGM8L2ftktLFEeaaW5uLy2ZAwN9jto/F1kxi0eDXjpnMUTRvrLsZYbbWfeLxUwncH6U="
+    - secure: "YJ3rjVjxJpypd1+Y1Z/tDwc94AVfUn4hFg0Cejn9RtJhY8GQT66Q/k/U6x1Pm+fDWXjdxX6z4Gi5IX+Ui+DSFroVZK76HQeoP4Y0YfAsMVxfER5r9CK00E7JQLUE+wKFMWE19I+MZA+TYEYWXN+/xtOpi4PHYqpyH3CNFnwsj0FNghAqSMHmJNfnHkOxCVafwV2b4WpxHgVvuoR5YXlj19jO518/YlbjICUcuvo6CSiMO4cfaoLwSmF3OvQJC78ViQlA8utE7d5MOeiwHDyfvKJbnjAXCmvbgLf92FQbSN039kdECEELscbloDQyEhCP4/R6CWNmvlT/gKuFpH2A2czcKvxubwucPhh3Py5lSQBqxFxkSlr+M6kg2O2alnDHPjJNJmgT86XG9AV9ExG1+uQjdMYkn7xWbux8LSNGQ9vvuL9RrXNjXzt8DbQZdoYqbATqeT88xHT0H9AyIRyEZJKPYo4FAQ2P52UdBKwJps9x5ePURzlVe4COa6Z7l3Di3hqXddgQOunrc5vys0+ryFJKhkT/UNmDd5qSAg2I32i4TmL3paTMhbafg8E4gM1qdmaQKYdY2fO8kWVevXS3KW6LIImtEkzXzOwB5/h0Zt0JL7JAG49mNXjSBs4vp5H7J9z8NkC64qmZjZpESo+zo1glBMb7MoVIiY6pZqpRheU="
 
 os:
   - linux
@@ -34,7 +34,7 @@ script:
   - echo $CATE_OUTPUT
   - ls -l $CATE_OUTPUT
   #
-  - echo anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force
+  - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force
   #
   #- CATE_CLI_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-cli --output)
   #- anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force
