@@ -1,28 +1,25 @@
-version: '0.7.0.dev1'
+version: '0.7.0.dev1.{build}'
 
-build: off
-
-branches:
-  only:
-    - master
+environment:
+  global:
+    # Example can be found here https://github.com/quantopian/zipline/blob/master/appveyor.yml
+    ANACONDA_TOKEN:
+      secure: "aO7ZPjKVGHJqXDtvT8ivg+h4zBn1TW7YiMONS6fk83KkyKeZSk9Z4MotgKja5KvN"
+    PYTHON_LOC: "C:\\Miniconda35-x64"
+    INSTALLER_VERSION: "0.7.0.dev1"
 
 install:
-  - set PATH=C:\Miniconda35-x64;C:\Miniconda35-x64\Scripts;%PATH%
-  - conda build --output-folder cate-packages -c conda-forge -c defaults recipes\cate
-  - conda build --output-folder cate-packages -c conda-forge -c defaults recipes\cate-cli
-  - conda build --output-folder cate-packages -c conda-forge -c defaults recipes\cate-lib
-  - conda build --output-folder cate-packages -c conda-forge -c defaults recipes\cate-util
+  - cmd: call %PYTHON_LOC%\Scripts\activate.bat
+  - cmd: conda config --set always_yes yes --set changeps1 no
+  - cmd: conda install -y conda-build constructor anaconda-client
 
-platform:
-  - x86
-  - x64
+build_script:
+  - cmd: conda build -c conda-forge -c defaults recipes\cate
+  - cmd: conda build -c conda-forge -c defaults recipes\cate-cli
+  - cmd: conda build -c conda-forge -c defaults recipes\cate-lib
+  - cmd: conda build -c conda-forge -c defaults recipes\cate-util
+  #- cmd: constructor installer
 
-matrix:
-  fast_finish: true
-
-artifacts:
-  - path: '*.exe'
-    name: cate-installer-exe
-
-#  TODO (forman): upload packages to anaconda package repo
-
+deploy_script:
+  - cmd: anaconda -v -t %ANACONDA_TOKEN% upload "%PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2" -u ccitools --force
+  # upload the installer

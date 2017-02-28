@@ -37,5 +37,3 @@ script:
   - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_LIB_OUTPUT" -u ccitools --force
   - CATE_UTIL_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-util --output)
   - anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force
-
-#  TODO (forman): upload packages to anaconda package repo
