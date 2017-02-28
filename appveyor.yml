@@ -4,7 +4,7 @@ environment:
   global:
     # Example can be found here https://github.com/quantopian/zipline/blob/master/appveyor.yml
     ANACONDA_TOKEN:
-      secure: "aO7ZPjKVGHJqXDtvT8ivg+h4zBn1TW7YiMONS6fk83KkyKeZSk9Z4MotgKja5KvN"
+      secure: "Whb/T2fL16t975pbtx8lsc38bvrzbrdmqofy8zLhKDcRPNNaFoFq2IfJWiF29kac"
     PYTHON_LOC: "C:\\Miniconda35-x64"
     INSTALLER_VERSION: "0.7.0.dev1"
 
