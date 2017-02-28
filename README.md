@@ -1,7 +1,7 @@
 <img alt="Cate: ESA CCI Toolbox" align="right" src="https://raw.githubusercontent.com/CCI-Tools/cate-core/master/doc/source/_static/logo/cci-toolbox-logo-latex.jpg" />
 
 [![Build Status](https://travis-ci.org/CCI-Tools/cate-conda.svg?branch=master)](https://travis-ci.org/CCI-Tools/cate-conda)
-[![Build status](https://ci.appveyor.com/api/projects/status/to0dhvj3vqg08lwg/branch/master?svg=true)](https://ci.appveyor.com/project/forman/cate-conda/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/oqup2pgne4h9xa4t?svg=true)](https://ci.appveyor.com/project/ccitools/cate-conda)
 
 # cate-conda
 
