@@ -35,10 +35,16 @@ script:
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
       CATE_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate --output);
       anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force;
+    fi
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
       CATE_CLI_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-cli --output);
       anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force;
+    fi
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
       CATE_LIB_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-lib --output);
       anaconda -v -t $ANACONDA_TOKEN upload "$CATE_LIB_OUTPUT" -u ccitools --force;
+    fi
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
       CATE_UTIL_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-util --output);
       anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force;
     fi

@@ -45,6 +45,7 @@ requirements:
     - pandas
     - cartopy
     - pillow >=3.4,<4
+    - geopandas
     - tornado >=4.4,<5
     - jdcal
 
@@ -63,6 +64,7 @@ requirements:
     - pandas
     - cartopy
     - pillow >=3.4,<4
+    - geopandas
     - tornado >=4.4,<5
     - jdcal
 

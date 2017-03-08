@@ -32,6 +32,7 @@ requirements:
     - matplotlib >=1.5,<2
     - numpy >=1.11,<2
     - pillow >=3.4,<4
+    - geopandas
     - tornado >=4.4,<5
 
   run:
@@ -40,6 +41,7 @@ requirements:
     - matplotlib >=1.5,<2
     - numpy >=1.11,<2
     - pillow >=3.4,<4
+    - geopandas
     - tornado >=4.4,<5
 
 test:
