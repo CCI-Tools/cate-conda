@@ -16,6 +16,7 @@ install:
 build_script:
   # appveyor has no HOME directory set, this leads to an error in matplotlib
   - set MPLCONFIGDIR="."
+  - mkdir %TMP%
   - conda build -c conda-forge -c defaults recipes\cate
   - conda build -c conda-forge -c defaults recipes\cate-cli
   - conda build -c conda-forge -c defaults recipes\cate-lib
