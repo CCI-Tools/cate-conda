@@ -14,10 +14,10 @@ install:
   - cmd: conda install -y conda-build constructor anaconda-client
 
 build_script:
-  - cmd: conda build --debug -c conda-forge -c defaults recipes\cate
-  - cmd: conda build --debug -c conda-forge -c defaults recipes\cate-cli
-  - cmd: conda build --debug -c conda-forge -c defaults recipes\cate-lib
-  - cmd: conda build --debug -c conda-forge -c defaults recipes\cate-util
+  - cmd: conda build -c conda-forge -c defaults recipes\cate
+  - cmd: conda build -c conda-forge -c defaults recipes\cate-cli
+  - cmd: conda build -c conda-forge -c defaults recipes\cate-lib
+  - cmd: conda build -c conda-forge -c defaults recipes\cate-util
 
 deploy_script:
   #- cmd: anaconda -v -t %ANACONDA_TOKEN% upload "%PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2" -u ccitools --force
