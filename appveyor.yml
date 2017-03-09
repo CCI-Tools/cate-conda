@@ -16,10 +16,10 @@ install:
 build_script:
   # appveyor has no HOME directory set, this leads to an error in matplotlib
   - set MPLCONFIGDIR="."
-  - conda build -c conda-forge -c defaults recipes\cate
-  - conda build -c conda-forge -c defaults recipes\cate-cli
-  - conda build -c conda-forge -c defaults recipes\cate-lib
-  - conda build -c conda-forge -c defaults recipes\cate-util
+  - conda build --no-test -c conda-forge -c defaults recipes\cate
+  - conda build --no-test -c conda-forge -c defaults recipes\cate-cli
+  - conda build --no-test -c conda-forge -c defaults recipes\cate-lib
+  - conda build --no-test -c conda-forge -c defaults recipes\cate-util
 
 deploy_script:
   #- cmd: anaconda -v -t %ANACONDA_TOKEN% upload "%PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2" -u ccitools --force
