@@ -25,10 +25,10 @@ install:
   - conda install conda-build anaconda-client
 
 script:
-  - conda build -c conda-forge -c defaults recipes/cate
-  - conda build -c conda-forge -c defaults recipes/cate-cli
-  - conda build -c conda-forge -c defaults recipes/cate-lib
-  - conda build -c conda-forge -c defaults recipes/cate-util
+  - conda build --debug -c conda-forge -c defaults recipes/cate
+  - conda build --debug -c conda-forge -c defaults recipes/cate-cli
+  - conda build --debug -c conda-forge -c defaults recipes/cate-lib
+  - conda build --debug -c conda-forge -c defaults recipes/cate-util
 
 after_success:
   - echo "TRAVIS_EVENT_TYPE=$TRAVIS_EVENT_TYPE"
