@@ -29,9 +29,11 @@ script:
   - conda build -c conda-forge -c defaults recipes/cate-cli
   - conda build -c conda-forge -c defaults recipes/cate-lib
   - conda build -c conda-forge -c defaults recipes/cate-util
+
+after_success:
   - echo "TRAVIS_EVENT_TYPE=$TRAVIS_EVENT_TYPE"
   - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH"
-  # only publish artifacts on master when pushed (not from cron or PRs)
+  # only publish artifacts on master branch when pushed (not from cron or PRs)
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
       CATE_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate --output);
       anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force;
