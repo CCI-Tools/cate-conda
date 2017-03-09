@@ -26,8 +26,8 @@ source:
 
 requirements:
   build:
-    - python 3.5
-    - numpy 1.11
+    - python >=3.5
+    - numpy >=1.11
     #
     - setuptools
 
@@ -36,8 +36,8 @@ requirements:
     - tornado >=4.4,<5
 
   run:
-    - python 3.5
-    - numpy 1.11
+    - python >=3.5
+    - numpy >=1.11
     #
 
     - matplotlib >=1.5,<2

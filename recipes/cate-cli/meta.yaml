@@ -29,8 +29,8 @@ source:
 
 requirements:
   build:
-    - python 3.5
-    - numpy 1.11
+    - python >=3.5
+    - numpy >=1.11
     #
     - setuptools
     - pytest
@@ -56,8 +56,8 @@ requirements:
     - geos >=3.5.1
 
   run:
-    - python 3.5
-    - numpy 1.11
+    - python >=3.5
+    - numpy >=1.11
     #
     - menuinst    # [win]
     #
