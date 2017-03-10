@@ -41,6 +41,6 @@ deploy_script:
       if ($env:APPVEYOR_REPO_BRANCH -eq 'master') {
           $env:conda_upload = 'true'
       }
-   - cmd: IF "%conda_upload%"=="true" anaconda -v -t %ANACONDA_TOKEN% upload %PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2 -u ccitools --force
-   - echo "Finished Artifact Deployment"
+  - cmd: IF "%conda_upload%"=="true" anaconda -v -t %ANACONDA_TOKEN% upload %PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2 -u ccitools --force
+  - echo "Finished Artifact Deployment"
 
