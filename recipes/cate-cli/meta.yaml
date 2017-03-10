@@ -29,7 +29,8 @@ source:
 
 requirements:
   build:
-    - python 3.6*
+    # 3.6 fiales while testing the conda package, because of dependeny problems
+    - python 3.5*
     - numpy 1.11*
     #
     - setuptools
@@ -56,7 +57,7 @@ requirements:
     - geos >=3.5.1
 
   run:
-    - python 3.6*
+    - python 3.5*
     - numpy 1.11*
     #
     - menuinst    # [win]

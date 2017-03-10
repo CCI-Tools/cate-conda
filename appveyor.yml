@@ -20,12 +20,13 @@ build_script:
   - conda build --no-test -c conda-forge -c defaults recipes\cate-cli
   - conda build --no-test -c conda-forge -c defaults recipes\cate-lib
   - conda build --no-test -c conda-forge -c defaults recipes\cate-util
+  # test are disbaled on appveyor: matplotlib fails, because no writable HOME directory
 
 deploy_script:
-  - anaconda -v -t %ANACONDA_TOKEN% upload "%PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2" -u ccitools --force
+  #- anaconda -v -t %ANACONDA_TOKEN% upload "%PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2" -u ccitools --force
   # only publish artifacts on master branch when pushed (not from cron or PRs)
-  #- ps: >-
-  #    if(!$env:APPVEYOR_SCHEDULED_BUILD -and !$env:appveyor_pull_request_number -and $env:APPVEYOR_REPO_BRANCH -eq 'master') {
-  #- anaconda -v -t $env:ANACONDA_TOKEN upload $env:PYTHON_LOC\conda-bld\win-64\cate*.tar.bz2 -u ccitools --force
-  #    }
+  - ps: |
+      if(!$env:APPVEYOR_SCHEDULED_BUILD -and !$env:appveyor_pull_request_number -and $env:APPVEYOR_REPO_BRANCH -eq 'master') {
+        anaconda -v -t $env:ANACONDA_TOKEN upload "$env:PYTHON_LOC\conda-bld\win-64\cate*.tar.bz2" -u ccitools --force
+      }
 

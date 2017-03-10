@@ -28,7 +28,9 @@ source:
 
 requirements:
   build:
-    - python 3.6*
+    # 3.6 fiales while testing the conda package, because of dependeny problems
+    # the "star *" notation is required to incldue the py and np version in the package name
+    - python 3.5*
     - numpy 1.11*
     #
     - setuptools
@@ -55,8 +57,7 @@ requirements:
     - geos >=3.5.1
 
   run:
-    # python 3.6 not working correctly
-    - python 3.6*
+    - python 3.5*
     - numpy 1.11*
     #
     - cartopy
