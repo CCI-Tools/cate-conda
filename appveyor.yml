@@ -27,12 +27,20 @@ deploy_script:
   # only publish artifacts on master branch when pushed (not from cron or PRs)
   - ps: |
       if ( $env:APPVEYOR_SCHEDULED_BUILD -eq "True" ) {
-          return
+          write-output "CRON build, won't deploy to anaconda"
+      } else {
+          $env:conda_upload = 'true'
       }
+  - ps: |
       if ([bool]$env:APPVEYOR_PULL_REQUEST_NUMBER) {
-          return
+          write-output "PULL REQUEST build, won't deploy to anaconda"
+      } else {
+          $env:conda_upload = 'true'
       }
+  - ps: |
       if ($env:APPVEYOR_REPO_BRANCH -eq 'master') {
-          anaconda -v -t $env:ANACONDA_TOKEN upload "$env:PYTHON_LOC\conda-bld\win-64\cate*.tar.bz2" -u ccitools --force
+          $env:conda_upload = 'true'
       }
+   - cmd: IF "%conda_upload%"=="true" anaconda -v -t %ANACONDA_TOKEN% upload %PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2 -u ccitools --force
+   - echo "Finished Artifact Deployment"
 
