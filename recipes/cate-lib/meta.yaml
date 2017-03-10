@@ -25,8 +25,8 @@ source:
 
 requirements:
   build:
-    - python >=3.5,<3.5.99
-    - numpy >=1.11,<1.12
+    - python 3.5*
+    - numpy 1.11*
     #
     - setuptools
     - pytest
@@ -52,8 +52,8 @@ requirements:
     - geos >=3.5.1
 
   run:
-    - python >=3.5,<3.5.99
-    - numpy >=1.11,<1.12
+    - python 3.5*
+    - numpy 1.11*
     #
     - cartopy
     - dask >=0.14
