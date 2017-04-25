@@ -11,10 +11,14 @@ package:
   name: cate-lib
   # Not released/deployed yet! Use PEP 440 versioning scheme
   # ref: https://www.python.org/dev/peps/pep-0440/#developmental-releases
-  version: "0.7.0.dev1"
+  # e.g.
+  # 0.7.0.dev1
+  # 0.7.0rc1
+  # 0.7.0rc1.dev1
+  version: "0.8.0rc1"
 
 build:
-  number: 2
+  number: 0
 
 source:
   # git_rev: v0.7.0a1
@@ -45,9 +49,10 @@ requirements:
     - pillow >=4.0
     - pyproj >=1.9
     - pyqt 4*
+    - python-dateutil
     - scipy >=0.17
     - tornado >=4.4
-    - xarray >=0.9.1
+    - xarray >=0.9.5
     #
     # for these packages specific version are needed, lower minor version have errors
     # they often get downgraded if not required explicitly
@@ -70,9 +75,10 @@ requirements:
     - pillow >=4.0
     - pyproj >=1.9
     - pyqt 4*
+    - python-dateutil
     - scipy >=0.17
     - tornado >=4.4
-    - xarray >=0.9.1
+    - xarray >=0.9.5
     #
     # for these packages specific version are needed, lower minor version have errors
     # they often get downgraded if not required explicitly
