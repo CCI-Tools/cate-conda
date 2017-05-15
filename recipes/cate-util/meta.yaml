@@ -15,7 +15,7 @@ package:
   # 0.7.0.dev1
   # 0.7.0rc1
   # 0.7.0rc1.dev1
-  version: "0.8.0rc1"
+  version: "0.8.0rc2"
 
 build:
   number: 0
@@ -27,15 +27,12 @@ source:
   # Uncomment to skip the "git clone" step
   # path: ../../../cate-core
 
-
 requirements:
   build:
     # 3.6 fiales while testing the conda package, because of dependeny problems
     - python 3.5*
     - numpy 1.11*
-    #
     - setuptools
-
     - matplotlib 1.5*
     - pillow >=4.0
     - tornado >=4.4,<5
@@ -43,11 +40,6 @@ requirements:
   run:
     - python 3.5*
     - numpy 1.11*
-    #
-
-    - matplotlib 1.5*
-    - pillow >=4.0
-    - tornado >=4.4,<5
 
 test:
   # Python imports
