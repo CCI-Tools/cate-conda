@@ -15,7 +15,7 @@ package:
   # 0.7.0.dev1
   # 0.7.0rc1
   # 0.7.0rc1.dev1
-  version: "0.8.0rc2"
+  version: "0.8.0rc3"
 
 build:
   number: 0

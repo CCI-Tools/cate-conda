@@ -14,7 +14,7 @@ if errorlevel 1 exit 1
 prompt $G$S
 
 echo.
-@echo Welcome to the CCI Toolbox command-line interface. Type "cate -h" to get help.
+@echo ESA CCI Toolbox (CLI) command-line interface. Type "cate -h" to get help.
 echo.
 
 cmd /K ""

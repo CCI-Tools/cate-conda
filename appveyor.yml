@@ -18,7 +18,6 @@ build_script:
   - set MPLCONFIGDIR="."
   - conda build --no-test -c conda-forge -c defaults recipes\cate
   - conda build --no-test -c conda-forge -c defaults recipes\cate-cli
-  - conda build --no-test -c conda-forge -c defaults recipes\cate-lib
   - conda build --no-test -c conda-forge -c defaults recipes\cate-util
   # test are disbaled on appveyor: matplotlib fails, because no writable HOME directory
 
