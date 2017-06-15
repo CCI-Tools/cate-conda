@@ -33,7 +33,7 @@ source:
 
 requirements:
   build:
-    - python=3.6*
+    - python 3.6*
     #
     # dependencies (in alphabetical order)
     #
@@ -70,7 +70,7 @@ requirements:
     - pytest-cov
 
   run:
-    - python=3.6*
+    - python 3.6*
     #
     # dependencies (in alphabetical order)
     #
