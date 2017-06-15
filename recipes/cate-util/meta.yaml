@@ -29,8 +29,7 @@ source:
 
 requirements:
   build:
-    # python 3.6 fails while testing the conda package, because of dependency problems
-    - python 3.5*
+    - python >=3.5
     - numpy 1.11*
     - setuptools
     - matplotlib 1.5*
@@ -38,12 +37,12 @@ requirements:
     - tornado >=4.4,<5
 
   run:
-    - python 3.5*
+    - python >=3.5
     - numpy 1.11*
 
 test:
   requires:
-    - python 3.5*
+    - python >=3.5
     - numpy 1.11*
     - setuptools
     - matplotlib 1.5*
