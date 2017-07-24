@@ -1,4 +1,4 @@
-# version 0.9.0.dev4, b1
+# version 0.9.0.dev4, b2
 
 language: generic
 
@@ -29,7 +29,7 @@ install:
 script:
   - conda build -c conda-forge -c defaults recipes/cate
   - conda build -c conda-forge -c defaults recipes/cate-cli
-  # - conda build -c conda-forge -c defaults recipes/cate-util
+  - conda build -c conda-forge -c defaults recipes/cate-util
 
 after_success:
   - echo "TRAVIS_EVENT_TYPE=$TRAVIS_EVENT_TYPE"
@@ -43,7 +43,7 @@ after_success:
       CATE_CLI_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-cli --output);
       anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force;
     fi
-  #- if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
-  #    CATE_UTIL_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-util --output);
-  #    anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force;
-  #  fi
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
+      CATE_UTIL_OUTPUT=$(conda build -c conda-forge -c defaults recipes/cate-util --output);
+      anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force;
+    fi
