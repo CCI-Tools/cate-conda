@@ -16,9 +16,9 @@ install:
 build_script:
   # appveyor has no HOME directory set, this leads to an error in matplotlib
   - set MPLCONFIGDIR="."
-  - conda build --no-test -c conda-forge -c defaults recipes\cate
-  - conda build --no-test -c conda-forge -c defaults recipes\cate-cli
-  - conda build --no-test -c conda-forge -c defaults recipes\cate-util
+  - conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate
+  - conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate-cli
+  - conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate-util
   # test are disbaled on appveyor: matplotlib fails, because no writable HOME directory
 
 deploy_script:
