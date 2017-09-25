@@ -27,7 +27,7 @@ build:
 source:
   # git_rev: v0.6.0a1
   #git_url: https://github.com/CCI-Tools/cate.git
-  git_url: https://github.com/CCI-Tools/cat.git
+  git_url: https://github.com/CCI-Tools/cate.git
   # Uncomment to skip the "git clone" step
   # path: ../../../cate
 
