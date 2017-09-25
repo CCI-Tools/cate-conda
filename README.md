@@ -1,4 +1,4 @@
-<img alt="Cate: ESA CCI Toolbox" align="right" src="https://raw.githubusercontent.com/CCI-Tools/cate-core/master/doc/source/_static/logo/cci-toolbox-logo-latex.jpg" />
+<img alt="Cate: ESA CCI Toolbox" align="right" src="https://raw.githubusercontent.com/CCI-Tools/cate/master/doc/source/_static/logo/cci-toolbox-logo-latex.jpg" />
 
 [![Build Status](https://travis-ci.org/CCI-Tools/cate-conda.svg?branch=master)](https://travis-ci.org/CCI-Tools/cate-conda)
 [![Build status](https://ci.appveyor.com/api/projects/status/oqup2pgne4h9xa4t?svg=true)](https://ci.appveyor.com/project/ccitools/cate-conda)
@@ -6,7 +6,7 @@
 # cate-conda
 
 This repository provides scripts used to build and deploy various 
-[Cate](https://github.com/CCI-Tools/cate-core) packages 
+[Cate](https://github.com/CCI-Tools/cate) packages
 for the [Anaconda](https://www.continuum.io/) and
 [Miniconda](https://conda.io/miniconda.html) Python distributions.
  

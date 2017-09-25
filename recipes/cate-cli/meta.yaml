@@ -2,8 +2,8 @@
 # for more information about this file.
 
 about:
-  summary: "ESA CCI Toolbox (Cate) command-line interface"
-  home: https://github.com/CCI-Tools/cate-core
+  summary: "ESA CCI Toolbox (Cate) with CLI"
+  home: https://github.com/CCI-Tools/cate
   license: MIT
   license_file: LICENSE
 
@@ -15,7 +15,7 @@ package:
   # 0.7.0.dev1
   # 0.7.0rc1
   # 0.7.0rc1.dev1
-  version: "0.9.0.dev7"
+  version: "1.0.0.dev1"
 
 build:
   number: 0
@@ -26,10 +26,10 @@ build:
 
 source:
   # git_rev: v0.6.0a1
-  #git_url: https://github.com/CCI-Tools/cate-core.git
-  git_url: https://github.com/CCI-Tools/cate-core.git
+  #git_url: https://github.com/CCI-Tools/cate.git
+  git_url: https://github.com/CCI-Tools/cat.git
   # Uncomment to skip the "git clone" step
-  # path: ../../../cate-core
+  # path: ../../../cate
 
 requirements:
   build:
@@ -40,7 +40,8 @@ requirements:
     - cartopy >=0.15
     # Include cython, otherwise pip will do so during "python setup.py install" (why???)
     - cython >=0.25
-    - dask >=0.14
+    # dask 0.15.3 broke the build
+    - dask >=0.15.0, <=0.15.2
     - fiona >=1.7
     - geopandas >=0.2
     # require specific minor version to prevent downgrade

@@ -3,7 +3,7 @@
 
 about:
   summary: "ESA CCI Toolbox (Cate), just the utilities"
-  home: https://github.com/CCI-Tools/cate-core
+  home: https://github.com/CCI-Tools/cate
   license: MIT
   license_file: LICENSE
 
@@ -15,17 +15,17 @@ package:
   # 0.7.0.dev1
   # 0.7.0rc1
   # 0.7.0rc1.dev1
-  version: "0.9.0.dev7"
+  version: "1.0.0.dev1"
 
 build:
   number: 0
 
 source:
   # git_rev: v0.7.0a1
-  # git_url: https://github.com/CCI-Tools/cate-core.git
-  git_url: https://github.com/CCI-Tools/cate-core.git
+  # git_url: https://github.com/CCI-Tools/cate.git
+  git_url: https://github.com/CCI-Tools/cate.git
   # Uncomment to skip the "git clone" step
-  # path: ../../../cate-core
+  # path: ../../../cate
 
 requirements:
   build:
