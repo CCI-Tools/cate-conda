@@ -11,10 +11,14 @@ popd
 call "%CATE_BIN%\activate.bat" "%CATE_HOME%"
 if errorlevel 1 exit 1
 
-prompt $G$S
+if "%*" == "" (
+  prompt $G$S
 
-echo.
-@echo ESA CCI Toolbox (CLI) command-line interface. Type "cate -h" to get help.
-echo.
+  echo.
+  @echo ESA CCI Toolbox (CLI) command-line interface. Type "cate -h" to get help.
+  echo.
 
-cmd /K ""
+  cmd /K ""
+) else (
+  %*
+)
