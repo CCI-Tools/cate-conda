@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment=
-Exec=${PREFIX}/bin/cate-cli.sh
-TryExec=${PREFIX}/bin/cate-cli.sh
+Exec=${PREFIX}/bin/cate-cli
+TryExec=${PREFIX}/bin/cate-cli
 Icon=${PREFIX}/share/cate/cate.png
 MimeType=
 Name=Cate CLI
