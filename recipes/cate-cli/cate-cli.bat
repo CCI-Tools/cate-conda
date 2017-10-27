@@ -4,7 +4,7 @@ set CATE_BIN=%~dp0
 
 rem Make CATE_HOME=%CATE_BIN%\.. an absolute path:
 pushd .
-cd %CATE_BIN%\..
+cd /D %CATE_BIN%\..
 set CATE_HOME=%CD%
 popd
 
