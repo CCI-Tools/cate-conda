@@ -58,7 +58,7 @@ test:
   imports:
     - cate.util.cache
     - cate.util.cli
-    - cate.util.extent
+    - cate.util.extend
     - cate.util.im
     - cate.util.misc
     - cate.util.monitor
