@@ -16,7 +16,7 @@ package:
   # 0.7.0rc1
   # 0.7.0rc1.dev1
   # 1.0.0
-  version: "1.0.1.dev1"
+  version: "1.1.0.dev1"
 
 build:
   number: 0
@@ -29,29 +29,43 @@ source:
   # path: ../../../cate
 
 requirements:
+  run:
+    # cate.util.* shall have no other dependencies, exceptions are cate.util.im, cate.util.web (see below)
+    - python >=3.5
+
   build:
     - python >=3.5
-    - numpy 1.11*
     - setuptools
+    # cate.util.im dependencies
     - matplotlib 1.5*
-    - pillow >=4.0
-    - tornado >=4.4,<5
-
-  run:
-    - python >=3.5
     - numpy 1.11*
+    - pillow >=4.0
+    # cate.util.web dependency
+    - tornado >=4.4,<5
 
 test:
   requires:
     - python >=3.5
-    - numpy 1.11*
     - setuptools
+    # cate.util.im dependencies
     - matplotlib 1.5*
+    - numpy 1.11*
     - pillow >=4.0
+    # cate.util.web dependency
     - tornado >=4.4,<5
 
   # Python imports
   imports:
-    - cate.util
+    - cate.util.cache
+    - cate.util.cli
+    - cate.util.extent
     - cate.util.im
+    - cate.util.misc
+    - cate.util.monitor
+    - cate.util.namespace
+    - cate.util.opmetainf
+    - cate.util.process
+    - cate.util.safe
+    - cate.util.tmpfile
+    - cate.util.undefined
     - cate.util.web

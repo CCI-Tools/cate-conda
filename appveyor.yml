@@ -1,5 +1,5 @@
+# version here is only relevant for the AppVeyor CI, no need to adjust
 version: '{build}'
-# version here is only relevant for the appveyor CI, no need to adjust
 
 environment:
   global:
@@ -14,15 +14,14 @@ install:
   - conda install -y conda-build constructor anaconda-client
 
 build_script:
-  # appveyor has no HOME directory set, this leads to an error in matplotlib
+  # Test are disabled (--no-test): matplotlib fails, because no writable HOME directory
+  #                                AppVeyor has no HOME directory set.
   - set MPLCONFIGDIR="."
   - conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate
   - conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate-cli
-  #- conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate-util
-  # test are disbaled on appveyor: matplotlib fails, because no writable HOME directory
+  - conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate-util
 
 deploy_script:
-  #- anaconda -v -t %ANACONDA_TOKEN% upload "%PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2" -u ccitools --force
   # only publish artifacts on master branch when pushed (not from cron or PRs)
   - ps: |
       if ( $env:APPVEYOR_SCHEDULED_BUILD -eq "True" ) {
@@ -42,4 +41,3 @@ deploy_script:
       }
   - cmd: IF "%conda_upload%"=="true" anaconda -v -t %ANACONDA_TOKEN% upload %PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2 -u ccitools --force
   - echo "Finished Artifact Deployment"
-
