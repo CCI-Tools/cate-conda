@@ -1,4 +1,4 @@
-# version 1.1.0.dev6, b2
+# version 1.1.0.dev6, b3
 
 language: generic
 
@@ -33,18 +33,30 @@ script:
   #- conda build --old-build-string -c conda-forge -c defaults recipes/cate
   #  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
   #    CATE_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate --output);
-  #    echo $CATE_OUTPUT;
-  #    anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force || travis_terminate 1;
+  #    echo "conda package $CATE_OUTPUT";
+  #    anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force;
+  #    if [ $result -ne 0 ]; then
+  #       echo "Uploading to Anaconda Cloud failed";
+  #       travis_terminate 1;
+  #    fi
   #  fi
   - conda build --old-build-string -c conda-forge -c defaults recipes/cate-cli
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
       CATE_CLI_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate-cli --output);
-      echo $CATE_CLI_OUTPUT;
-      anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force || travis_terminate 1;
+      echo "conda package $CATE_CLI_OUTPUT";
+      anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force;
+      if [ $result -ne 0 ]; then
+         echo "Uploading to Anaconda Cloud failed";
+         travis_terminate 1;
+      fi
     fi
   #- conda build --old-build-string -c conda-forge -c defaults recipes/cate-util
   #- if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
   #    CATE_UTIL_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate-util --output);
-  #    echo $CATE_UTIL_OUTPUT;
-  #    anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force || travis_terminate 1;
+  #    echo "conda package $CATE_UTIL_OUTPUT";
+  #    anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force;
+  #    if [ $result -ne 0 ]; then
+  #       echo "Uploading to Anaconda Cloud failed";
+  #       travis_terminate 1;
+  #    fi
   #  fi
