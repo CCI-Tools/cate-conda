@@ -1,4 +1,4 @@
-# version 1.1.0.dev6, b3
+# version 1.1.0.dev6, b4
 
 language: generic
 
@@ -35,7 +35,7 @@ script:
   #    CATE_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate --output);
   #    echo "conda package $CATE_OUTPUT";
   #    anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force;
-  #    if [ $result -ne 0 ]; then
+  #    if [ $? -ne 0 ]; then
   #       echo "Uploading to Anaconda Cloud failed";
   #       travis_terminate 1;
   #    fi
@@ -45,7 +45,7 @@ script:
       CATE_CLI_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate-cli --output);
       echo "conda package $CATE_CLI_OUTPUT";
       anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force;
-      if [ $result -ne 0 ]; then
+      if [ $? -ne 0 ]; then
          echo "Uploading to Anaconda Cloud failed";
          travis_terminate 1;
       fi
@@ -55,7 +55,7 @@ script:
   #    CATE_UTIL_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate-util --output);
   #    echo "conda package $CATE_UTIL_OUTPUT";
   #    anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force;
-  #    if [ $result -ne 0 ]; then
+  #    if [ $? -ne 0 ]; then
   #       echo "Uploading to Anaconda Cloud failed";
   #       travis_terminate 1;
   #    fi
