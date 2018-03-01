@@ -17,9 +17,9 @@ build_script:
   # Test are disabled (--no-test): matplotlib fails, because no writable HOME directory
   #                                AppVeyor has no HOME directory set.
   - set MPLCONFIGDIR="."
-  - conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate
+  #- conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate
   - conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate-cli
-  - conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate-util
+  #- conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate-util
 
 deploy_script:
   # only publish artifacts on master branch when pushed (not from cron or PRs)
