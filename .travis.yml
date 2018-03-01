@@ -1,4 +1,4 @@
-# version 1.1.0.dev6, b0
+# version 1.1.0.dev6, b1
 
 language: generic
 
@@ -27,9 +27,9 @@ install:
   - conda install conda-build anaconda-client
 
 script:
-  - conda build --old-build-string -c conda-forge -c defaults recipes/cate
+  #- conda build --old-build-string -c conda-forge -c defaults recipes/cate
   - conda build --old-build-string -c conda-forge -c defaults recipes/cate-cli
-  - conda build --old-build-string -c conda-forge -c defaults recipes/cate-util
+  #- conda build --old-build-string -c conda-forge -c defaults recipes/cate-util
 
 after_success:
   - echo "TRAVIS_EVENT_TYPE=$TRAVIS_EVENT_TYPE"
