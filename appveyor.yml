@@ -3,9 +3,6 @@ version: '{build}'
 
 environment:
   global:
-    # Example can be found here https://github.com/quantopian/zipline/blob/master/appveyor.yml
-    ANACONDA_TOKEN:
-      secure: "Whb/T2fL16t975pbtx8lsc38bvrzbrdmqofy8zLhKDcRPNNaFoFq2IfJWiF29kac"
     PYTHON_LOC: "C:\\Miniconda36-x64"
 
 install:

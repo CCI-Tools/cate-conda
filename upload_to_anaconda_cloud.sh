@@ -2,9 +2,10 @@
 
 set -e
 
-echo "branch $TRAVIS_BRANCH"
-echo "event $TRAVIS_EVENT_TYPE"
-echo "package $1"
+echo "branch:  $TRAVIS_BRANCH"
+echo "event:   $TRAVIS_EVENT_TYPE"
+echo "package: $1"
+echo
 
 if [ "$TRAVIS_BRANCH" = "master" ]; then
     if [ "$TRAVIS_EVENT_TYPE" = "api" -o "$TRAVIS_EVENT_TYPE" = "push" ]; then

@@ -1,12 +1,10 @@
-# version 2.0.0.dev1, b3
+# version 2.0.0.dev1, b4
 
 language: generic
 
 env:
   global:
     - CONDA_PY=3.6
-    #  the following key was generated in 2 steps based on the example here https://github.com/quantopian/zipline/blob/master/.travis.yml
-    - secure: "YJ3rjVjxJpypd1+Y1Z/tDwc94AVfUn4hFg0Cejn9RtJhY8GQT66Q/k/U6x1Pm+fDWXjdxX6z4Gi5IX+Ui+DSFroVZK76HQeoP4Y0YfAsMVxfER5r9CK00E7JQLUE+wKFMWE19I+MZA+TYEYWXN+/xtOpi4PHYqpyH3CNFnwsj0FNghAqSMHmJNfnHkOxCVafwV2b4WpxHgVvuoR5YXlj19jO518/YlbjICUcuvo6CSiMO4cfaoLwSmF3OvQJC78ViQlA8utE7d5MOeiwHDyfvKJbnjAXCmvbgLf92FQbSN039kdECEELscbloDQyEhCP4/R6CWNmvlT/gKuFpH2A2czcKvxubwucPhh3Py5lSQBqxFxkSlr+M6kg2O2alnDHPjJNJmgT86XG9AV9ExG1+uQjdMYkn7xWbux8LSNGQ9vvuL9RrXNjXzt8DbQZdoYqbATqeT88xHT0H9AyIRyEZJKPYo4FAQ2P52UdBKwJps9x5ePURzlVe4COa6Z7l3Di3hqXddgQOunrc5vys0+ryFJKhkT/UNmDd5qSAg2I32i4TmL3paTMhbafg8E4gM1qdmaQKYdY2fO8kWVevXS3KW6LIImtEkzXzOwB5/h0Zt0JL7JAG49mNXjSBs4vp5H7J9z8NkC64qmZjZpESo+zo1glBMb7MoVIiY6pZqpRheU="
 
 os:
   - linux
@@ -27,28 +25,11 @@ install:
   - conda install conda-build anaconda-client
 
 script:
-  - echo "TRAVIS_EVENT_TYPE=$TRAVIS_EVENT_TYPE"
-  - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH"
-  # only publish artifacts on master branch when pushed (not from cron or PRs)
   #- conda build --old-build-string -c conda-forge -c defaults recipes/cate
-  #  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
-  #    CATE_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate --output);
-  #    echo "conda package $CATE_OUTPUT";
-  #    anaconda -v -t $ANACONDA_TOKEN upload "$CATE_OUTPUT" -u ccitools --force;
-  #    if [ $? -ne 0 ]; then
-  #       echo "Uploading to Anaconda Cloud failed";
-  #       travis_terminate 1;
-  #    fi
-  #  fi
+  #- ./upload_to_anaconda_cloud.sh cate
+  #
   - conda build --old-build-string -c conda-forge -c defaults recipes/cate-cli
   - ./upload_to_anaconda_cloud.sh cate-cli
+  #
   #- conda build --old-build-string -c conda-forge -c defaults recipes/cate-util
-  #- if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
-  #    CATE_UTIL_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate-util --output);
-  #    echo "conda package $CATE_UTIL_OUTPUT";
-  #    anaconda -v -t $ANACONDA_TOKEN upload "$CATE_UTIL_OUTPUT" -u ccitools --force;
-  #    if [ $? -ne 0 ]; then
-  #       echo "Uploading to Anaconda Cloud failed";
-  #       travis_terminate 1;
-  #    fi
-  #  fi
+  #- ./upload_to_anaconda_cloud.sh cate-util
