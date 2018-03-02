@@ -1,4 +1,4 @@
-# version 2.0.0.dev1, b2
+# version 2.0.0.dev1, b3
 
 language: generic
 
@@ -41,15 +41,7 @@ script:
   #    fi
   #  fi
   - conda build --old-build-string -c conda-forge -c defaults recipes/cate-cli
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
-      CATE_CLI_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate-cli --output);
-      echo "conda package $CATE_CLI_OUTPUT";
-      anaconda -v -t $ANACONDA_TOKEN upload "$CATE_CLI_OUTPUT" -u ccitools --force;
-      if [ $? -ne 0 ]; then
-         echo "Uploading to Anaconda Cloud failed";
-         travis_terminate 1;
-      fi
-    fi
+  - ./upload_to_anaconda_cloud.sh cate-cli
   #- conda build --old-build-string -c conda-forge -c defaults recipes/cate-util
   #- if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_EVENT_TYPE" = "push" ]; then
   #    CATE_UTIL_OUTPUT=$(conda build --old-build-string -c conda-forge -c defaults recipes/cate-util --output);
