@@ -16,7 +16,7 @@ package:
   # 0.7.0rc1
   # 0.7.0rc1.dev1
   # 1.0.0
-  version: "2.0.0.dev3"
+  version: "2.0.0.dev4"
 
 build:
   number: 0
@@ -37,7 +37,7 @@ requirements:
     - python >=3.5
     - setuptools
     # cate.util.im dependencies
-    - matplotlib >=2.0
+    - matplotlib >=2.2
     - numpy 1.11*
     - pillow >=4.0
     # cate.util.web dependency
@@ -48,7 +48,7 @@ test:
     - python >=3.5
     - setuptools
     # cate.util.im dependencies
-    - matplotlib >=2.0
+    - matplotlib >=2.2
     - numpy 1.11*
     - pillow >=4.0
     # cate.util.web dependency
