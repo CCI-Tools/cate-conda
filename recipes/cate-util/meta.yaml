@@ -37,22 +37,22 @@ requirements:
     - python >=3.5
     - setuptools
     # cate.util.im dependencies
-    - matplotlib >=2.2
+    - matplotlib >=2.2,<3.0
     - numpy 1.11*
-    - pillow >=4.0
+    - pillow >=5.0,<6.0
     # cate.util.web dependency
-    - tornado >=4.4,<5
+    - tornado >=5.0,<6.0
 
 test:
   requires:
     - python >=3.5
     - setuptools
     # cate.util.im dependencies
-    - matplotlib >=2.2
+    - matplotlib >=2.2,<3.0
     - numpy 1.11*
-    - pillow >=4.0
+    - pillow >=5.0,<6.0
     # cate.util.web dependency
-    - tornado >=4.4,<5
+    - tornado >=5.0,<6.0
 
   # Python imports
   imports:
