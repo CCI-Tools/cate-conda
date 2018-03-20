@@ -16,7 +16,7 @@ package:
   # 0.7.0rc1
   # 0.7.0rc1.dev1
   # 1.0.0
-  version: "2.0.0.dev6"
+  version: "2.0.0.dev7"
 
 build:
   number: 0
@@ -39,7 +39,6 @@ requirements:
     # dependencies (in alphabetical order)
     #
     - cartopy >=0.15
-    - conda >=4.4
     # Include Cython, otherwise pip will do so during "python setup.py install" (why???)
     - cython >=0.25
     - dask >=0.15.4
