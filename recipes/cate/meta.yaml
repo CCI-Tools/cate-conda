@@ -16,7 +16,7 @@ package:
   # 0.7.0rc1
   # 0.7.0rc1.dev1
   # 1.0.0
-  version: "2.0.0.dev7"
+  version: "2.0.0.dev8"
 
 build:
   number: 0
@@ -65,7 +65,8 @@ requirements:
     - scipy >=0.19,<1.0
     - shapely >=1.6,<2.0
     - tornado >=5.0,<6.0
-    - xarray >=0.10,<1.0
+    # xarray >= 0.10.1 has an issue with time decoding see #579
+    - xarray ==0.10.0
     #
     # build
     - setuptools
@@ -106,8 +107,8 @@ requirements:
     - scipy >=0.19,<1.0
     - shapely >=1.6,<2.0
     - tornado >=5.0,<6.0
-    - xarray >=0.10,<1.0
-
+    # xarray >= 0.10.1 has an issue with time decoding see #579
+    - xarray ==0.10.0
 
 test:
   # Python imports
