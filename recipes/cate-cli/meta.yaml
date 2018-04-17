@@ -13,17 +13,16 @@ package:
   # ref: https://www.python.org/dev/peps/pep-0440/#developmental-releases
   # e.g.
   # 0.7.0.dev1
-  # 0.7.0rc1
-  # 0.7.0rc1.dev1
   # 1.0.0
-  version: "2.0.0.dev8"
+  version: "2.0.0.dev9"
 
 build:
   number: 0
   entry_points:
     # Put any entry points (scripts to be generated automatically) here.
     - cate = cate.cli.main:main
-    - cate-webapi = cate.webapi.main:main
+    - cate-webapi-start = cate.webapi.start:main
+    - cate-webapi-stop = cate.webapi.stop:main
 
 source:
   # git_rev: v0.6.0a1

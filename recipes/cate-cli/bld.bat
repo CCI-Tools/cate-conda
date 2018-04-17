@@ -15,4 +15,3 @@ if errorlevel 1 exit 1
 
 copy "%RECIPE_DIR%\cate-cli.bat" "%SCRIPTS_DIR%"
 if errorlevel 1 exit 1
-
