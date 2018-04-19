@@ -14,7 +14,7 @@ package:
   # e.g.
   # 0.7.0.dev1
   # 1.0.0
-  version: "2.0.0.dev9"
+  version: "2.0.0.dev10"
 
 build:
   number: 0
@@ -37,6 +37,7 @@ requirements:
     # dependencies (in alphabetical order)
     #
     - cartopy >=0.15,<1.0
+    - conda >=4.5,<5.0
     # Include Cython, otherwise pip will do so during "python setup.py install" (why???)
     - cython >=0.25,<1.0
     - dask >=0.15.4,<1.0
