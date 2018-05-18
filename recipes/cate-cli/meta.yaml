@@ -142,11 +142,3 @@ test:
     - pytest
     - pytest-cov
 
-# The app section is for creating entries in the Anaconda Launcher / Navigator
-app:
-  entry: open ${PREFIX}/Scripts/cate-cli.bat      # [win]
-  entry: open ${PREFIX}/bin/cate-cli              # [osx]
-  entry: open ${PREFIX}/bin/cate-cli              # [linux]
-  icon: cate.png
-  own_environment: False
-  summary:  "ESA CCI Toolbox (Cate) command-line interface"
