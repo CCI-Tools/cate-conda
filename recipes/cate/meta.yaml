@@ -14,7 +14,7 @@ package:
   # e.g.
   # 0.7.0.dev1
   # 1.0.0
-  version: "2.0.0.dev18"
+  version: "2.0.0.dev19"
 
 build:
   number: 0
@@ -36,6 +36,8 @@ requirements:
     #
     # dependencies (in alphabetical order)
     #
+    - boto3 >=1.9.2,<2.0
+    - botocore >=1.12.3,<2.0
     - cartopy >=0.15,<1.0
     - conda >=4.5.1,<5.0
     # Include Cython, otherwise pip will do so during "python setup.py install" (why???)
