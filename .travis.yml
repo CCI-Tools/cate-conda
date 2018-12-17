@@ -1,10 +1,10 @@
-# version 2.0.0.dev22, b4
+# version 2.0.0.dev24, b1
 
 language: generic
 
 env:
   global:
-    - CONDA_PY=3.6
+    - CONDA_PY=3.7
 
 os:
   - linux

@@ -14,7 +14,7 @@ package:
   # e.g.
   # 0.7.0.dev1
   # 1.0.0
-  version: "2.0.0.dev22"
+  version: "2.0.0.dev24"
 
 build:
   number: 0
@@ -27,31 +27,98 @@ source:
   # path: ../../../cate
 
 requirements:
-  run:
-    # cate.util.* shall have no other dependencies, exceptions are cate.util.im, cate.util.web (see below)
-    - python >=3.5
-
   build:
-    - python >=3.5
+    - python=3.7.1
+    # Runtime libs
+    - bokeh=1.0.2
+    - boto3=1.9.65
+    - botocore=1.12.66
+    - cartopy=0.17.0
+    - conda=4.5.11
+    - cython=0.29.2
+    - dask=1.0.0
+    - fiona=1.8.4
+    - gdal=2.3.2
+    - geopandas=0.4.0
+    - geos=3.6.2
+    - geotiff=1.4.2
+    - h5netcdf=0.6.2
+    - h5py=2.8.0
+    - hdf4=4.2.13
+    - hdf5=1.10.3
+    - jdcal=1.4
+    - kealib=1.4.10
+    - matplotlib=3.0.2
+    - numba=0.41.0
+    - numpy=1.15.4
+    - netcdf4=1.4.2
+    - owslib=0.17.0
+    - pandas=0.23.4
+    - pillow=5.3.0
+    - pip=18.1
+    - proj4=4.9.3
+    - psutil=5.4.8
+    - pyepsg=0.4.0
+    - pyproj=1.9.5
+    - pyshp=2.0.0
+    - python-dateutil=2.7.5
+    - s3transfer=0.1.13
+    - scipy=1.1.0
+    - setuptools=40.6.3
+    - shapely=1.6.4
+    - tornado=5.1.1
+    - xarray=0.11.0
+    - yaml=0.1.7
+    # Test libs
+    - flake8
+    - pytest
+    - pytest-cov
     - setuptools
-    # cate.util.im dependencies
-    - matplotlib >=2.2,<3.0
-    - numpy 1.13*
-    - pillow >=5.0,<6.0
-    # cate.util.web dependency
-    - tornado >=5.0,<6.0
+
+  run:
+    - python=3.7.1
+    # Runtime libs
+    - bokeh=1.0.2
+    - boto3=1.9.65
+    - botocore=1.12.66
+    - cartopy=0.17.0
+    - conda=4.5.11
+    - cython=0.29.2
+    - dask=1.0.0
+    - fiona=1.8.4
+    - gdal=2.3.2
+    - geopandas=0.4.0
+    - geos=3.6.2
+    - geotiff=1.4.2
+    - h5netcdf=0.6.2
+    - h5py=2.8.0
+    - hdf4=4.2.13
+    - hdf5=1.10.3
+    - jdcal=1.4
+    - kealib=1.4.10
+    - matplotlib=3.0.2
+    - numba=0.41.0
+    - numpy=1.15.4
+    - netcdf4=1.4.2
+    - owslib=0.17.0
+    - pandas=0.23.4
+    - pillow=5.3.0
+    - pip=18.1
+    - proj4=4.9.3
+    - psutil=5.4.8
+    - pyepsg=0.4.0
+    - pyproj=1.9.5
+    - pyshp=2.0.0
+    - python-dateutil=2.7.5
+    - s3transfer=0.1.13
+    - scipy=1.1.0
+    - setuptools=40.6.3
+    - shapely=1.6.4
+    - tornado=5.1.1
+    - xarray=0.11.0
+    - yaml=0.1.7
 
 test:
-  requires:
-    - python >=3.5
-    - setuptools
-    # cate.util.im dependencies
-    - matplotlib >=2.2,<3.0
-    - numpy 1.13*
-    - pillow >=5.0,<6.0
-    # cate.util.web dependency
-    - tornado >=5.0,<6.0
-
   # Python imports
   imports:
     - cate.util.cache
