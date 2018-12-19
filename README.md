@@ -18,7 +18,6 @@ which is used to build a stand-alone installer for Cate.
 * `cate` - the default, complete Cate distribution for Python
 * `cate-cli` - same as `cate` but creates start menu / desktop shortcuts for the Cate command-line interface (CLI) 
    during installation using `conda install`
-* `cate-lib` - expects all dependent libraries to be provided by a target environment, i.e. as peer dependencies
 * `cate-util` - just the `cate.util` Python package with optional dependencies
  
 ## Building Cate Conda packages
