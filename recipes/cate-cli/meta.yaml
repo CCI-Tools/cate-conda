@@ -122,6 +122,8 @@ requirements:
     - tornado=5.1.1
     - xarray=0.11.0
     - yaml=0.1.7
+    # Pinned transitive dependencies
+    - ncurses=6.1 # [not win]
 
 test:
   # Python imports
