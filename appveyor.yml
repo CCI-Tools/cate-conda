@@ -8,8 +8,10 @@ environment:
 install:
   - call %PYTHON_LOC%\Scripts\activate.bat
   - conda config --set always_yes yes --set changeps1 no
-  #- conda install -y conda-build constructor anaconda-client
-  - conda install -y conda-build anaconda-client
+  # conda-build=3.16.3 was broken and failed with error message
+  # "Couldn't extract raw recipe text for cate-cli output"
+  # - conda install -y conda-build=3.16.2 constructor anaconda-client
+  - conda install -y conda-build=3.16.2 anaconda-client
 
 build_script:
   # Test are disabled (--no-test): matplotlib fails, because no writable HOME directory
