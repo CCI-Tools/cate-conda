@@ -14,7 +14,7 @@ package:
   # e.g.
   # 0.7.0.dev1
   # 1.0.0
-  version: "2.0.0.dev24"
+  version: "2.0.0.dev25"
 
 build:
   number: 0
@@ -33,13 +33,13 @@ source:
 
 requirements:
   build:
-    - python=3.7.1
+    - python=3.7
+    - conda=4.5
     # Runtime libs
     - bokeh=1.0.2
     - boto3=1.9.65
     - botocore=1.12.66
     - cartopy=0.17.0
-    - conda=4.5.11
     - cython=0.29.2
     - dask=1.0.0
     - fiona=1.8.4
@@ -81,13 +81,13 @@ requirements:
     - setuptools
 
   run:
-    - python=3.7.1
+    - python=3.7
+    - conda=4.5
     # Runtime libs
     - bokeh=1.0.2
     - boto3=1.9.65
     - botocore=1.12.66
     - cartopy=0.17.0
-    - conda=4.5.11
     - cython=0.29.2
     - dask=1.0.0
     - fiona=1.8.4
