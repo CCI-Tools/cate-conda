@@ -25,7 +25,7 @@ install:
   # conda-build=3.16.3 was broken and failed with error message
   # "Couldn't extract raw recipe text for cate-cli output"
   # - conda install conda-build=3.16.2 constructor anaconda-client
-  - conda install conda-build=3.16.2 anaconda-client
+  - conda install conda-verify conda-build=3.16.2 anaconda-client
 
 script:
   #- conda build --old-build-string -c conda-forge -c defaults recipes/cate
