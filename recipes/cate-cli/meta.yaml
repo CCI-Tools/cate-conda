@@ -1,12 +1,6 @@
 # See https://conda.io/docs/building/meta-yaml.html
 # for more information about this file.
 
-about:
-  summary: "ESA CCI Toolbox (Cate) with CLI"
-  home: https://github.com/CCI-Tools/cate
-  license: MIT
-  license_file: LICENSE
-
 package:
   name: cate-cli
   # Not released/deployed yet! Use PEP 440 versioning scheme
@@ -33,7 +27,7 @@ source:
 
 requirements:
   build:
-    - python=3.7
+    - python=3.6
     - conda=4.5
     # Runtime libs
     - bokeh=1.0.2
@@ -81,7 +75,7 @@ requirements:
     - setuptools
 
   run:
-    - python=3.7
+    - python=3.6
     - conda=4.5
     # Runtime libs
     - bokeh=1.0.2
@@ -154,3 +148,9 @@ test:
     # Put any additional test requirements here.
     - pytest
     - pytest-cov
+
+about:
+  summary: "ESA CCI Toolbox (Cate) with CLI"
+  home: https://github.com/CCI-Tools/cate
+  license: MIT
+  license_file: LICENSE  
