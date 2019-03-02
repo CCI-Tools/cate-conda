@@ -8,7 +8,7 @@ package:
   # e.g.
   # 0.7.0.dev1
   # 1.0.0
-  version: "2.0.0.dev25"
+  version: "2.0.0.dev26"
 
 build:
   number: 0
@@ -28,7 +28,7 @@ source:
 requirements:
   build:
     - python=3.7
-    - conda=4.5.11
+    - conda=4.6
     # Runtime libs
     - bokeh=1.0.2
     - boto3=1.9.65
