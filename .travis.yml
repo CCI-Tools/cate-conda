@@ -1,4 +1,4 @@
-# version 2.0.0.dev26, b2
+# version 2.0.0.dev26, b3
 
 language: generic
 
@@ -24,8 +24,9 @@ install:
   - conda info -a
   # conda-build=3.16.3 was broken and failed with error message
   # "Couldn't extract raw recipe text for cate-cli output"
+  # with, conda-build=3.16.2 cate does not seem to be installed during the build
   # - conda install conda-build=3.16.2 constructor anaconda-client
-  - conda install conda-verify conda-build=3.16.2 anaconda-client
+  - conda install conda-verify conda-build=3.17.8 anaconda-client
 
 script:
   #- conda build --old-build-string -c conda-forge -c defaults recipes/cate

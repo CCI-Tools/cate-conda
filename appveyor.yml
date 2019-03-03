@@ -10,8 +10,9 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   # conda-build=3.16.3 was broken and failed with error message
   # "Couldn't extract raw recipe text for cate-cli output"
+  # with, conda-build=3.16.2 cate does not seem to be installed during the build
   # - conda install -y conda-build=3.16.2 constructor anaconda-client
-  - conda install -y conda-build=3.16.2 anaconda-client
+  - conda install -y conda-build=3.17.8 anaconda-client
 
 build_script:
   # Test are disabled (--no-test): matplotlib fails, because no writable HOME directory
