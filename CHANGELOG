@@ -1,0 +1,7 @@
+## Changes for version 2.0.1
+
+- Removed recipes cate-cli and cate-util
+- Updated conda packages in meta.yaml
+- Simplified teh build secion in meta.yaml
+- Changed source to tar gzipped release file
+- Travis: Moved deployment into deploy section. Only builds on linux
