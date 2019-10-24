@@ -35,7 +35,6 @@ requirements:
     - cython>=0.29.2
     - dask>=1.0.0
     - fiona>=1.8.4
-    - gdal>=2.3.3
     - geopandas>=0.4.0
     - geos>=3.7.1
     - geotiff>=1.4.2
@@ -52,7 +51,6 @@ requirements:
     - pandas>=0.23.4
     - pillow>=5.3.0
     - pip>=18.1
-    - proj4>=5.2.0
     - psutil>=5.4.8
     - pyepsg>=0.4.0
     - pyproj>=1.9.5
@@ -63,7 +61,7 @@ requirements:
     - setuptools>=40.6.3
     - shapely>=1.6.4
     - tornado>=5.1.1
-    - xarray>=0.11.0
+    - xarray>=0.12
     - yaml>=0.1.7
 
 test:
@@ -112,5 +110,5 @@ about:
   license: MIT
   license_file: LICENSE
   license_family: MIT
-  doc_url: https://climatetoolbox.io
+  doc_url: https://cate.readthedocs.io
   dev_url: https://github.com/CCI-Tools/cate

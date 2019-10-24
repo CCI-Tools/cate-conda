@@ -5,3 +5,5 @@
 - Simplified teh build secion in meta.yaml
 - Changed source to tar gzipped release file
 - Travis: Moved deployment into deploy section. Only builds on linux
+- Added windows on travis
+- removed some unnecessary packages from dependencies
