@@ -19,7 +19,7 @@ build:
 
 source:
     url: "https://github.com/CCI-Tools/cate/archive/v{{ version }}.tar.gz"
-    sha256: 35a934429ff173b383203395ad4ad513c405a15bd5a6c2a319d4d8fa6816f116
+    sha256: 046bb37c24a694678ecf8221c057817511f488073aea6f5394a604e86f5dd166
 
 requirements:
   build:
