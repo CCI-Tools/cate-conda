@@ -33,9 +33,7 @@ install:
   - conda install conda-verify conda-build anaconda-client
 
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      conda build -c conda-forge recipes/cate;
-    fi
+  - conda build -c conda-forge recipes/cate
 
 
 deploy:
