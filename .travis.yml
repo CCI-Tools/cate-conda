@@ -42,7 +42,7 @@ deploy:
     script: . deploy_to_anaconda.sh
     on:
       # tags: true
-      branch: all
+      all_branch: true
     condition: $TRAVIS_OS_NAME = linux
     skip_cleanup: true
 
