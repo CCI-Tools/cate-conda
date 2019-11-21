@@ -43,10 +43,3 @@ deploy:
     on:
       tags: true
     skip_cleanup: true
-  - provider: script
-    script: bash deploy_to_anaconda.sh dev
-    on:
-      all_branches: true
-      tags: false
-    skip_cleanup: true
-
