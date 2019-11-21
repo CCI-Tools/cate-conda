@@ -8,7 +8,7 @@ environment:
 install:
   - call %PYTHON_LOC%\Scripts\activate.bat
   - conda config --set always_yes yes --set changeps1 no --set channel_priority strict
-  - conda install -y anaconda-client
+  - conda install -y conda-verify conda-build anaconda-client
 
 build_script:
   - set MPLCONFIGDIR="."
