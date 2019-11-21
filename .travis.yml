@@ -43,6 +43,5 @@ deploy:
     on:
       # tags: true
       all_branches: true
-    condition: $TRAVIS_OS_NAME = linux
     skip_cleanup: true
 
