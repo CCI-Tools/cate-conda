@@ -39,12 +39,12 @@ script:
 deploy:
   # Deploy to Anaconda.org
   - provider: script
-    script: bash ./deploy_to_anaconda.sh production
+    script: bash deploy_to_anaconda.sh production
     on:
       tags: true
     skip_cleanup: true
   - provider: script
-    script: bash ./deploy_to_anaconda.sh dev
+    script: bash deploy_to_anaconda.sh dev
     on:
       all_branches: true
       tags: false
