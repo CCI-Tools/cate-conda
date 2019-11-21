@@ -39,7 +39,7 @@ script:
 deploy:
   # Deploy to Anaconda.org
   - provider: script
-    script: . deploy_to_anaconda.sh deploy
+    script: bash ./deploy_to_anaconda.sh deploy
     on:
       # tags: true
       all_branches: true
