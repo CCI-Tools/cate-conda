@@ -2,7 +2,7 @@
 
 set -e
 
-echo "package: $1"
+echo "mode: $1"
 echo
 
 CONDA_PACKAGE=$(conda build -c conda-forge recipes/$1 --output);

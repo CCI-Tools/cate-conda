@@ -39,10 +39,10 @@ script:
 deploy:
   # Deploy to Anaconda.org
   - provider: script
-    script: . deploy_to_anaconda.sh
+    script: . deploy_to_anaconda.sh deploy
     on:
       # tags: true
-      all_branch: true
+      all_branches: true
     condition: $TRAVIS_OS_NAME = linux
     skip_cleanup: true
 
