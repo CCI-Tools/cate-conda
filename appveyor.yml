@@ -12,6 +12,6 @@ install:
 
 build_script:
   - set MPLCONFIGDIR="."
-  - conda build --old-build-string -c conda-forge recipes\cate
+  - conda build --old-build-string -c conda-forge recipe
 
 

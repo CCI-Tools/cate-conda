@@ -33,7 +33,7 @@ install:
   - conda install conda-verify conda-build anaconda-client
 
 script:
-  - conda build -c conda-forge recipes/cate
+  - conda build -c conda-forge recipe
 
 
 deploy:

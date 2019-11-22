@@ -7,7 +7,7 @@ echo
 
 if [[ "${TRAVIS_OS_NAME}" = "linux" ]]
 then
-    CONDA_PACKAGE=$(conda build -c conda-forge recipes/cate --output);
+    CONDA_PACKAGE=$(conda build -c conda-forge recipe --output);
     echo "conda package ${CONDA_PACKAGE}. OS: ${TRAVIS_OS_NAME}";
 
     if [[ "$1" = "production" ]]
