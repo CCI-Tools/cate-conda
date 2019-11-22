@@ -98,9 +98,6 @@ test:
     # entry points work.
     - cate --help
 
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
-
 
 about:
   summary: "ESA CCI Toolbox (Cate) with CLI"
