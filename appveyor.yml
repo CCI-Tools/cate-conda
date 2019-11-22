@@ -12,6 +12,7 @@ install:
 
 build_script:
   - set MPLCONFIGDIR="."
-  - conda build --old-build-string -c conda-forge recipe
+  # conda build does not work on appveyor
+  - conda build --old-build-string --no-test -c conda-forge recipe
 
 
