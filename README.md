@@ -16,9 +16,6 @@ which is used to build a stand-alone installer for Cate.
 ## Available Cate Conda packages
 
 * `cate` - the default, complete Cate distribution for Python
-* `cate-cli` - same as `cate` but creates start menu / desktop shortcuts for the Cate command-line interface (CLI) 
-   during installation using `conda install`
-* `cate-util` - just the `cate.util` Python package with optional dependencies
  
 ## Building Cate Conda packages
 
@@ -31,10 +28,10 @@ Clone this repo:
     
     $ git clone https://github.com/CCI-Tools/cate-conda.git
     
-Build a Conda package `cate-<recipe>` (see `recipes/<recipe>/meta.yaml`):
+Build a Conda package `cate` (see `recipe/meta.yaml`):
     
     $ cd cate-conda
-    $ conda build -c conda-forge -c defaults recipes/<recipe>
+    $ conda build -c conda-forge recipe
      
 The `-c` (or `--channel`) option adds extra Anaconda *channels* to search for package 
 dependencies. We must add `defaults` to search for Anaconda default packagers first, then
@@ -54,4 +51,4 @@ To test the new Conda package `cate` in a test environment `cate-test`, type
 
 Just run the package build step with `--user <channel>`:
 
-    $ conda build --user ccitools -c conda-forge -c defaults recipes/<recipe>
+    $ conda build --user ccitools -c conda-forge -c defaults recipe

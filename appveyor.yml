@@ -7,38 +7,12 @@ environment:
 
 install:
   - call %PYTHON_LOC%\Scripts\activate.bat
-  - conda config --set always_yes yes --set changeps1 no
-  # conda-build=3.16.3 was broken and failed with error message
-  # "Couldn't extract raw recipe text for cate-cli output"
-  # with, conda-build=3.16.2 cate does not seem to be installed during the build
-  # - conda install -y conda-build=3.16.2 constructor anaconda-client
-  - conda install -y conda-build=3.17.8 anaconda-client
+  - conda config --set always_yes yes --set changeps1 no --set channel_priority strict
+  - conda install -y conda-verify conda-build anaconda-client
 
 build_script:
-  # Test are disabled (--no-test): matplotlib fails, because no writable HOME directory
-  #                                AppVeyor has no HOME directory set.
   - set MPLCONFIGDIR="."
-  #- conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate
-  - conda build --old-build-string --no-test -c conda-forge recipes\cate-cli
-  #- conda build --old-build-string --no-test -c conda-forge -c defaults recipes\cate-util
+  # conda build does not work on appveyor
+  - conda build --old-build-string --no-test -c conda-forge recipe
 
-deploy_script:
-  # only publish artifacts on master branch when pushed (not from cron or PRs)
-  - ps: |
-      if ( $env:APPVEYOR_SCHEDULED_BUILD -eq "True" ) {
-          write-output "CRON build, won't deploy to anaconda"
-      } else {
-          $env:conda_upload = 'true'
-      }
-  - ps: |
-      if ([bool]$env:APPVEYOR_PULL_REQUEST_NUMBER) {
-          write-output "PULL REQUEST build, won't deploy to anaconda"
-      } else {
-          $env:conda_upload = 'true'
-      }
-  - ps: |
-      if ($env:APPVEYOR_REPO_BRANCH -eq 'master') {
-          $env:conda_upload = 'true'
-      }
-  - cmd: IF "%conda_upload%"=="true" anaconda -v -t %ANACONDA_TOKEN% upload %PYTHON_LOC%\conda-bld\win-64\cate*.tar.bz2 -u ccitools --force
-  - echo "Finished Artifact Deployment"
+

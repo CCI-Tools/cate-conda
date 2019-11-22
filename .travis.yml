@@ -1,6 +1,6 @@
 # version 2.0.0, b1
 
-language: generic
+language: shell
 
 env:
   global:
@@ -9,31 +9,37 @@ env:
 os:
   - linux
   - osx
+  - windows
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh;
+      bash miniconda.sh -b -p $HOME/miniconda;
+      export PATH="$HOME/miniconda/bin:$PATH";
+    elif [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
+      choco install -y openssl;
+      choco install -y miniconda3;
+      export PATH="/c/tools/miniconda3/Scripts:$PATH";
+      source activate base;
     else
       wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+      bash miniconda.sh -b -p $HOME/miniconda;
+      export PATH="$HOME/miniconda/bin:$PATH";
     fi
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
   - hash -r
-  - conda config --set always_yes yes --set changeps1 no
+  - conda config --set always_yes yes --set changeps1 no --set channel_priority strict
   - conda update conda
   - conda info -a
-  # conda-build=3.16.3 was broken and failed with error message
-  # "Couldn't extract raw recipe text for cate-cli output"
-  # with, conda-build=3.16.2 cate does not seem to be installed during the build
-  # - conda install conda-build=3.16.2 constructor anaconda-client
-  - conda install conda-verify conda-build=3.17.8 anaconda-client
+  - conda install conda-verify conda-build anaconda-client
 
 script:
-  #- conda build --old-build-string -c conda-forge -c defaults recipes/cate
-  #- ./upload_to_anaconda_cloud.sh cate
-  #
-  - conda build --old-build-string -c conda-forge recipes/cate-cli
-  - ./upload_to_anaconda_cloud.sh cate-cli
-  #
-  #- conda build --old-build-string -c conda-forge -c defaults recipes/cate-util
-  #- ./upload_to_anaconda_cloud.sh cate-util
+  - conda build -c conda-forge recipe
+
+
+deploy:
+  # Deploy to Anaconda.org
+  - provider: script
+    script: bash deploy_to_anaconda.sh production
+    on:
+      tags: true
+    skip_cleanup: true
